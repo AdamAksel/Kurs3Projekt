@@ -1,0 +1,39 @@
+.cards-container {
+    position: absolute;
+    background-color: rgb(95, 94, 94);
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 4px -4px 5px 0px rgb(111, 108, 108);
+    top: 30%;
+    left: 30%;
+}
+
+.cards-container h2 {
+    outline: none;
+}
+
+.cards-container img {
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.cards-container p {
+    outline: none;
+    margin: 0;
+    z-index: 10;
+}
+
+.cards-name {
+    position: absolute;
+    max-width: 250px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+
+
+
+}
