@@ -17,7 +17,7 @@ for existing and connected repo:
 
 git add .
 git commit -m "some message"
-git push -u origin main
+git push -u origin "branch name"
 
 create a new branch:
 
