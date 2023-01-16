@@ -1,0 +1,32 @@
+.Navbar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+.Navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 60px;
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+.Navbar-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  min-width: 80vw;
+  flex: 1;
+}
+
+.Navbar-div-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
