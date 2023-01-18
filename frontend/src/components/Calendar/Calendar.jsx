@@ -10,6 +10,8 @@ import {
   faCalendarDays,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
+import { is } from "date-fns/locale";
+import CalenderCard from "./CalenderCard";
 const Calendar = () => {
 
 
@@ -22,7 +24,12 @@ const Calendar = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [filteredData, setFilteredData] = useState([]);
+  const [isOpened, setIsOpened] = useState(false);
 
+
+  const showAndHideCalendar = () => {
+    setIsOpened(!isOpened);
+  };
   const selectionRange = {
     startDate: startDate,
     endDate: endDate,
@@ -41,14 +48,11 @@ const Calendar = () => {
     setFilteredData(filteredData);
   };
   return (
-    <div className="calendar">
-
-   
     <div className="container_calendar">
       <div className="container_calendar_nav">
         <h1 className="calendar_title">Calendar</h1>
         <div className="calendar_nav">
-          <FontAwesomeIcon icon={faCalendarDays} className="searchIcon" />
+          <FontAwesomeIcon icon={faCalendarDays} className="searchIcon" onClick={showAndHideCalendar} />
           <span className="searchText">
             {format(startDate, "yyyy/MM/dd")} → {format(endDate, "yyyy/MM/dd")}
           </span>
@@ -59,8 +63,8 @@ const Calendar = () => {
         </div>
   
       </div>
-    </div>
-    <DateRangePicker
+  
+    {isOpened &&( <DateRangePicker
             editableDateInputs={true}
             months={2}
             direction="horizontal"
@@ -70,7 +74,9 @@ const Calendar = () => {
             rangeColors={["#FD5B61"]}
             moveRangeOnFirstSelection={false}
             className="date"
-          />
+          />)}
+
+          <CalenderCard/>
     </div>
   );
 };
