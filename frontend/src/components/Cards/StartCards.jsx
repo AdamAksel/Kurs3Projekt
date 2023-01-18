@@ -1,6 +1,7 @@
 import "./StartCards.css";
-import { events } from "../event-info";
-const StartCards = () => {
+
+const StartCards = (props) => {
+  console.log(props)
   return (
     <section className="cards-container">
       <div style={{ position: "relative", outline: 'none' }}>
@@ -10,7 +11,7 @@ const StartCards = () => {
             alt="chris-brown image"
           />
           <div className="cards-name">
-            <div className="cards-name-text">{events[0].artist}</div>
+            <div className="cards-name-text">{props.event.artist}</div>
           </div>
         </div>
 
