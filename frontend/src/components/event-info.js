@@ -1,4 +1,5 @@
-const events = [
+const data = { 
+  events: [
   {
     eventName: 'TestEvent1',
     date: '2023-02-21',
@@ -61,5 +62,9 @@ const events = [
     artist: 'TestArtist9',
     tickets: '0',
     info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel risus aliquet orci interdum sollicitudin. In nisl justo, ullamcorper id consectetur ut, convallis nec lorem. Pellentesque feugiat a justo ac scelerisque. Donec porta odio eu mi dignissim vulputate sed egestas nunc. Donec ac erat tincidunt, pellentesque mauris in, blandit ex. Vivamus dignissim, diam non convallis lobortis, enim justo tincidunt enim, vitae ultrices felis turpis a nisl. Aliquam dignissim diam et quam tristique vehicula. Donec laoreet, dui quis volutpat aliquet, dolor purus dictum metus, et faucibus odio dolor eget libero. Integer condimentum, felis ac auctor ullamcorper, nunc ex porttitor massa, vitae maximus magna tortor id dui. Curabitur faucibus nisl sed arcu ornare commodo. Fusce fringilla accumsan lectus id dictum. Quisque tincidunt lobortis fermentum.',
-  },
+  }
 ]
+
+}
+
+export default events

@@ -79,8 +79,6 @@ body {
   transition: all 0.5s ease;
 }
 
-
-
 .date {
   font-size: 20px;
   font-weight: 600;
@@ -114,7 +112,7 @@ body {
   font-weight: 600;
 }
 
-/* Events Card into Calendar component */
+/*! Events Card into Calendar component */
 .calendar {
   width: 100%;
   height: 100%;
@@ -132,7 +130,6 @@ body {
   background: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
 }
 
 /*! Date Calendar Card  */
@@ -151,7 +148,6 @@ body {
   font-weight: 600;
   color: var(--secondary-color);
   text-transform: uppercase;
-  /* margin-bottom: 5px ; */
 }
 .event__date_day_number {
   font-size: 52px;
@@ -168,7 +164,6 @@ body {
   color: var(--secondary-color);
   text-transform: uppercase;
 }
-
 
 .event__date__month {
   margin-right: 2px;
@@ -203,28 +198,23 @@ body {
 /*! Event Calendar Card title and description  */
 
 .event__info {
-
-    
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.event__title{
-    position: absolute;
-    top: 20px;
+.event__title {
+  position: absolute;
+  top: 20px;
   font-size: 16px;
   font-weight: 600;
   color: var(--secondary-color);
   text-transform: uppercase;
-
 }
 
 .event__description {
-    /* position: absolute; */
-    top: 50px;
-    width: 100%;
+  top: 50px;
+  width: 100%;
   font-size: 14px;
   font-weight: 400;
   color: var(--dark-grey-color);
@@ -232,29 +222,29 @@ body {
 }
 
 .event__location {
-    position: absolute;
-    width: 100%;
+  position: absolute;
+  width: 100%;
   font-size: 14px;
   font-weight: 400;
   color: var(--black-color);
   display: flex;
   justify-content: flex-start;
   align-items: center;
-    bottom: 20px;
+  bottom: 20px;
 }
 
 .event__location span {
-    margin: 5px;
-    font-size: 24px;
-    color: var(--light-grey-color);
-    font-weight: 100;
-    }
-
-.event__location p:nth-child(3) {
-    color: var(--light-grey-color);
+  margin: 5px;
+  font-size: 24px;
+  color: var(--light-grey-color);
+  font-weight: 100;
 }
 
-/* /*! Event Calendar Card payments button  */
+.event__location p:nth-child(3) {
+  color: var(--light-grey-color);
+}
+
+ /*! Event Calendar Card payments button  */
 
 .event__payment__button {
   display: flex;
@@ -262,25 +252,22 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
-    padding: 18px;
+  padding: 18px;
 }
 
 .event__button {
-    position: relative;
+  position: relative;
   font-size: 12px;
   font-weight: 600;
-    color: var(--white-color);
+  color: var(--white-color);
   background-color: var(--light-red-color);
   text-transform: uppercase;
-  /* margin-bottom: 5px; */
   padding: 10px 28px;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.5s ease;
-    border: none;
-    
-    /* width: 150px; */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: none;
 }
 
 .event__button:hover {
@@ -288,11 +275,11 @@ body {
 }
 
 .event__button::after {
-    content: ">";
-    position: absolute;
-    right: 2px;
-    top: 12px;
-    font-size: 24px;
-    color: var(--white-color);
-    font-weight: 100;
-    }
+  content: ">";
+  position: absolute;
+  right: 2px;
+  top: 12px;
+  font-size: 24px;
+  color: var(--white-color);
+  font-weight: 100;
+}

@@ -12,13 +12,26 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { is } from "date-fns/locale";
 import CalenderCard from "./CalenderCard";
+import events from "./../event-info"
 const Calendar = () => {
-  const data = [
-    { date: "2023/01/18", name: "John" },
-    { date: "2023/01/27", name: "Jane" },
-    { date: "2021-02-01", name: "Bob" },
-    { date: "2021-03-01", name: "Sara" },
-  ];
+  // const data = [
+  //   { date: "2023/01/18", name: "John" },
+  //   { date: "2023/01/27", name: "Jane" },
+  //   { date: "2021-02-01", name: "Bob" },
+  //   { date: "2021-03-01", name: "Sara" },
+  // ];
+
+
+  
+
+  const [events, setEvents] = useState([]);
+  const componentDidMount = () => {
+    // this.setState({ events: events });
+    console.log(events);
+    
+
+
+  };
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [filteredData, setFilteredData] = useState([]);
