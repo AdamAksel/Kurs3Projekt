@@ -61,21 +61,21 @@ const Calendar = () => {
           <span className="calendar_log"></span>
         </div>
       </div>
-
-      {isOpened && (
-        <DateRangePicker
-          editableDateInputs={true}
-          months={2}
-          direction="horizontal"
-          onChange={handleSelect}
-          ranges={[selectionRange]}
-          minDate={new Date()}
-          rangeColors={["#FD5B61"]}
-          moveRangeOnFirstSelection={false}
-          className="date"
-        />
-      )}
-
+      <div className="date__range">
+        {isOpened && (
+          <DateRangePicker
+            editableDateInputs={true}
+            months={2}
+            direction="horizontal"
+            onChange={handleSelect}
+            ranges={[selectionRange]}
+            minDate={new Date()}
+            rangeColors={["#FD5B61"]}
+            moveRangeOnFirstSelection={false}
+            className="date"
+          />
+        )}
+      </div>
       <div className="calendar">
         <CalenderCard />
       </div>
