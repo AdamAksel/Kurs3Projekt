@@ -1,8 +1,8 @@
 import React from "react";
-import { DateRange, DateRangePicker } from 'react-date-range';
+import { DateRange, DateRangePicker } from "react-date-range";
 import { format } from "date-fns";
-import 'react-date-range/dist/styles.css'; // main css file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
 import "./Calendar.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,8 +13,6 @@ import {
 import { is } from "date-fns/locale";
 import CalenderCard from "./CalenderCard";
 const Calendar = () => {
-
-
   const data = [
     { date: "2023/01/18", name: "John" },
     { date: "2023/01/27", name: "Jane" },
@@ -25,7 +23,6 @@ const Calendar = () => {
   const [endDate, setEndDate] = useState(new Date());
   const [filteredData, setFilteredData] = useState([]);
   const [isOpened, setIsOpened] = useState(false);
-
 
   const showAndHideCalendar = () => {
     setIsOpened(!isOpened);
@@ -52,31 +49,36 @@ const Calendar = () => {
       <div className="container_calendar_nav">
         <h1 className="calendar_title">Calendar</h1>
         <div className="calendar_nav">
-          <FontAwesomeIcon icon={faCalendarDays} className="searchIcon" onClick={showAndHideCalendar} />
+          <FontAwesomeIcon
+            icon={faCalendarDays}
+            className="searchIcon"
+            onClick={showAndHideCalendar}
+          />
           <span className="searchText">
             {format(startDate, "yyyy/MM/dd")} → {format(endDate, "yyyy/MM/dd")}
           </span>
-     
+
           <span className="calendar_log"></span>
-
-          
         </div>
-  
       </div>
-  
-    {isOpened &&( <DateRangePicker
-            editableDateInputs={true}
-            months={2}
-            direction="horizontal"
-            onChange={handleSelect}
-            ranges={[selectionRange]}
-            minDate={new Date()}
-            rangeColors={["#FD5B61"]}
-            moveRangeOnFirstSelection={false}
-            className="date"
-          />)}
 
-          <CalenderCard/>
+      {isOpened && (
+        <DateRangePicker
+          editableDateInputs={true}
+          months={2}
+          direction="horizontal"
+          onChange={handleSelect}
+          ranges={[selectionRange]}
+          minDate={new Date()}
+          rangeColors={["#FD5B61"]}
+          moveRangeOnFirstSelection={false}
+          className="date"
+        />
+      )}
+
+      <div className="calendar">
+        <CalenderCard />
+      </div>
     </div>
   );
 };

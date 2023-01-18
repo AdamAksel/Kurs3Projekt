@@ -29,12 +29,12 @@ body {
 .container_calendar {
   margin-top: 20px;
   width: 100%;
+  max-width: 1200px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 
 .container_calendar_nav {
@@ -85,7 +85,6 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   overflow: hidden;
- 
 }
 .calender__link {
   position: absolute;
@@ -110,17 +109,85 @@ body {
   font-weight: 600;
 }
 
-
 /* Events Card into Calendar component */
-
+.calendar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
 .container__calendar__Card {
-  width: 55.5rem;
-  border: none;
-  outline: none;
+  position: relative;
+  height: 160px;
+  width: 45rem;
+  display: flex;
+  align-items: center;
   background: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
+
 }
 
+/*! Date Calendar Card  */
+
+.event__date {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  padding: 15px;
+}
+
+.event__date_day {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  margin-bottom: 5px ;
+}
+.event__date_day_number {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+
+.event__month_year {
+  display: flex;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+.event__date__month {
+  margin-right: 5px;
+}
+.event__date__year {
+  margin-left: 5px;
+}
+
+.event__date__time {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dark-grey-color);
+}
+
+/*! images Calendar Card  */
+.event__image {
+  width: 12rem;
+  height: 100%;
+  padding: 15px;
+  margin: 0;
+}
+.event__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
