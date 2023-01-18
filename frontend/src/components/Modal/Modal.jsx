@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Modal.css";
 import { events } from "../event-info";
 
+
+
 export default function Modal() {
 
     const [modal, setModal] = useState(false);
@@ -24,18 +26,21 @@ export default function Modal() {
         className="div-modal">
             {events[0].artist}
         </div> : <div className="modal">
-            <div className="overlay"></div>
+            <div onClick={toggleModal} className="overlay"></div>
             <div className="modal-content">
-                <h2>{events[0].artist}</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis atque aspernatur odio reprehenderit eius, est accusamus ipsam impedit deleniti aliquam eos voluptas repellat ad similique, quaerat eligendi quos, accusantium reiciendis pariatur porro dolorum doloribus neque. Necessitatibus minus nisi eveniet nemo perspiciatis ad. Esse voluptas ut tempora enim, asperiores libero tenetur!</p>
-                <button 
+            <div id="modal-pic"> <img src="https://i.guim.co.uk/img/media/8aac28c34fdce2b8c020d0d960e90158d4df1153/0_113_2674_1604/master/2674.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=6d7d5a31ce4da443f7cb030dbc5f5750" alt="bild på christer" id="chris"/> </div> 
+            <div className="modal-text">
+            <div className="modal-div">{events[0].artist}</div> 
+               <div className="modal-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio eos quaerat quibusdam, odio beatae commodi nemo sapiente at provident ipsa, debitis minus inventore deserunt suscipit! Nihil illum, quam quod ex nemo beatae repudiandae ducimus, molestias et enim neque. Amet tempora, atque eligendi aspernatur eveniet rem eos dolore assumenda quisquam nesciunt.</div>
+               </div>
+                <div 
                 className="close-modal"
                 onClick={toggleModal}
-                >Close</button>
+                >Close</div>
             </div>
         </div>}
         
-
+        
         
 
         </>

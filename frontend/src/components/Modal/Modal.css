@@ -1,5 +1,6 @@
 body.active-modal {
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .div-modal {
@@ -13,6 +14,7 @@ body.active-modal {
     text-decoration: underline;
 }
 
+
 .modal, .overlay {
     width: 100vw;
     height: 100vh;
@@ -22,21 +24,29 @@ body.active-modal {
     bottom: 0;
     position: fixed;
 }
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .overlay {
     background: rgba(49,49,49,0.8);
+    z-index: -10;
 }
 .modal-content {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
     line-height: 1.4;
-    background: #f1f1f1;
+    background: #202C39;
+    color: #E8E8E8;
     padding: 14px 28px;
-    border-radius: 3px;
+    border-radius: 10px;
     max-width: 600px;
     min-width: 300px;
+    overflow: auto;
+    height: 75vh;
+    margin-top: 4vh;
 }
 
 .close-modal {
@@ -44,4 +54,31 @@ body.active-modal {
     top: 10px;
     right: 10px;
     padding: 5px 7px;
+    cursor: pointer;
+}
+.close-modal:hover {
+    text-decoration: underline;
+}
+#chris {
+    height: 400px;
+    width: 300px;
+}
+#modal-pic {
+    height: fit-content;
+    width: fit-content;
+}
+.modal-div {
+    font-size: 30px;
+    padding-right: 4vw;
+}
+.modal-text {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+    padding-left: 4vw;
+    min-height: 60vh;
+}
+.modal-info {
+    padding-top: 3vh;
 }
