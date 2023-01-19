@@ -1,0 +1,11 @@
+.startPage {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 800px;
+}
+.sect-cards {
+    margin: 20px;
+}
