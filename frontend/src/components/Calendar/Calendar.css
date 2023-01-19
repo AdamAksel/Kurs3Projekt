@@ -125,6 +125,7 @@ body {
   position: relative;
   height: 160px;
   width: 45rem;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   background: rgb(255, 255, 255);

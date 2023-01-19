@@ -10,9 +10,8 @@ import {
   faCalendarDays,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
-import { is } from "date-fns/locale";
 import CalenderCard from "./CalenderCard";
-import events from "./../event-info"
+import data from "../event-info"
 const Calendar = () => {
   // const data = [
   //   { date: "2023/01/18", name: "John" },
@@ -22,16 +21,16 @@ const Calendar = () => {
   // ];
 
 
-  
+  const events = data.events
 
-  const [events, setEvents] = useState([]);
-  const componentDidMount = () => {
+  const [event, setEvent] = useState(data.events);
+
     // this.setState({ events: events });
-    console.log(events);
+
     
 
 
-  };
+  
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [filteredData, setFilteredData] = useState([]);
@@ -58,6 +57,7 @@ const Calendar = () => {
     setFilteredData(filteredData);
   };
   return (
+    
     <div className="container_calendar">
       <div className="container_calendar_nav">
         <h1 className="calendar_title">Calendar</h1>
@@ -90,7 +90,7 @@ const Calendar = () => {
         )}
       </div>
       <div className="calendar">
-        <CalenderCard />
+        <CalenderCard data={data.events} />
       </div>
     </div>
   );
