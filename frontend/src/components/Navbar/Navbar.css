@@ -2,18 +2,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 60px;
+  min-height: 50px;
   min-width: 100vw;
   overflow: hidden;
+  flex-wrap: wrap;
+  background-color: #202c39;
+}
+
+.Navbar-sticky {
+  position: sticky;
+  top: 0;
 }
 
 .Navbar-nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  min-height: 60px;
+  min-height: 50px;
   min-width: 100vw;
   overflow: hidden;
+  text-decoration: none;
+
+  background-color: #202c39;
+}
+
+.Navbar-nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Navbar-main {
@@ -29,4 +45,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.Navbar-search-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  max-height: 180px;
+  min-height: 180px;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/570d339f8a65e2e984e265fc/1572563255064-HRM7IPO57ZW0CU7B1YJ6/https___cdn.evbuc.com_images_62445254_85974847449_1_original.jpg?format=1000w);
+  background-size: cover;
+}
+
+.Navbar-background-image {
+  min-width: 100vw;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.Navbar-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navbar-search-input {
+  border-radius: 25px;
+  min-height: 40px;
+  min-width: 250px;
+  font-size: larger;
+}
+
+.Navbar-search-button {
+  position: relative;
+  right: 8%;
+  border-radius: 25px;
+  min-height: 40px;
+}
+
+.lni {
+  font-size: xx-large;
+  color: #e8e8e8;
+}
+
+.lni:hover {
+  color: lightblue;
 }
