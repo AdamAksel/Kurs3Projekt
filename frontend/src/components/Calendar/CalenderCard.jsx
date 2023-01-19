@@ -1,16 +1,9 @@
 export default function CalenderCard({ data }) {
 
-console.log(data);
-
-
-
-
-
-
 
   return (
     
-    data.map((event) => {
+   data &&  data.map((event) => {
       return  <div className="container__calendar__Card" key={event.eventName} >
         <div className="event__date">
           <div className="event__date_day">fre</div>
@@ -41,6 +34,7 @@ console.log(data);
           <button className="event__button">Buy Ticket</button>
         </div>
       </div>;
-    })
+   })
 );
+
 }
