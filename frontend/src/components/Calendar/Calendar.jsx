@@ -11,7 +11,7 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import CalenderCard from "./CalenderCard";
-import data from "../event-info"
+import data from "../event-info";
 const Calendar = () => {
   // const data = [
   //   { date: "2023/01/18", name: "John" },
@@ -20,17 +20,12 @@ const Calendar = () => {
   //   { date: "2021-03-01", name: "Sara" },
   // ];
 
-
-  const events = data.events
+  const events = data.events;
 
   const [event, setEvent] = useState(data.events);
 
-    // this.setState({ events: events });
+  // this.setState({ events: events });
 
-    
-
-
-  
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [filteredData, setFilteredData] = useState([]);
@@ -46,8 +41,8 @@ const Calendar = () => {
   };
 
   const handleSelect = (ranges) => {
-    let filteredData = data.filter((item) => {
-      let date = new Date(item.date);
+    let filteredData = events.filter((item) => {
+      let date = new Date(item.date + "T00:00:00");
       return (
         date >= ranges.selection.startDate && date <= ranges.selection.endDate
       );
@@ -57,7 +52,6 @@ const Calendar = () => {
     setFilteredData(filteredData);
   };
   return (
-    
     <div className="container_calendar">
       <div className="container_calendar_nav">
         <h1 className="calendar_title">Calendar</h1>
@@ -90,7 +84,7 @@ const Calendar = () => {
         )}
       </div>
       <div className="calendar">
-        <CalenderCard data={data.events} />
+        <CalenderCard data={events} filters={filteredData} />
       </div>
     </div>
   );
