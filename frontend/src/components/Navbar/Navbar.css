@@ -45,7 +45,7 @@
 .Navbar-div-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .Navbar-search-image {
