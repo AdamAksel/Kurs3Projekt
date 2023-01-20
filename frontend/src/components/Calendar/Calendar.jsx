@@ -13,18 +13,7 @@ import {
 import CalenderCard from "./CalenderCard";
 import data from "../event-info";
 const Calendar = () => {
-  // const data = [
-  //   { date: "2023/01/18", name: "John" },
-  //   { date: "2023/01/27", name: "Jane" },
-  //   { date: "2021-02-01", name: "Bob" },
-  //   { date: "2021-03-01", name: "Sara" },
-  // ];
-
   const events = data.events;
-
-  const [event, setEvent] = useState(data.events);
-
-  // this.setState({ events: events });
 
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -41,16 +30,24 @@ const Calendar = () => {
   };
 
   const handleSelect = (ranges) => {
-    let filteredData = events.filter((item) => {
-      let date = new Date(item.date + "T00:00:00");
-      return (
-        date >= ranges.selection.startDate && date <= ranges.selection.endDate
-      );
-    });
+
+    let filteredData = events.filter((item, i) => {
+        let date = new Date(item.date[i]);
+        return (
+          date >= ranges.selection.startDate &&
+          date <= ranges.selection.endDate
+        );
+      });
+    
+
+ 
+
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
     setFilteredData(filteredData);
+    console.log("It's filter ", filteredData);
   };
+
   return (
     <div className="container_calendar">
       <div className="container_calendar_nav">

@@ -131,6 +131,7 @@ body {
   background: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 10px;
 }
 
 /*! Date Calendar Card  */
@@ -141,40 +142,59 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  padding: 20px;
+  padding: 20px 0 0 10px;
 }
 
+.arrow{
+  position: absolute;
+left: 3.5rem;
+top: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--light-grey-color);
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+
+
 .event__date_day {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--secondary-color);
   text-transform: uppercase;
 }
 .event__date_day_number {
-  font-size: 52px;
+  font-size: 44px;
   font-weight: 600;
   color: var(--secondary-color);
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 1.2;
+
 }
 
 .event__month_year {
   display: flex;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   color: var(--secondary-color);
   text-transform: uppercase;
 }
 
 .event__date__month {
-  margin-right: 2px;
+  margin-right: 1px;
 }
 .event__date__year {
-  margin-left: 2px;
+  margin-left: 1px;
 }
 
 .event__date__time {
-  margin-top: 10px;
+  margin-top: 14px;
   font-size: 12px;
   font-weight: 600;
   color: var(--dark-grey-color);
@@ -184,7 +204,7 @@ body {
 .event__image {
   width: 12rem;
   height: 100%;
-  padding: 15px;
+  padding: 10px 0;
   margin: 0;
 }
 .event__img {
@@ -249,11 +269,16 @@ body {
 
 .event__payment__button {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  
   height: 100%;
   padding: 18px;
+  
+
+  width: 16rem;
+
+
 }
 
 .event__button {
@@ -269,18 +294,27 @@ body {
   cursor: pointer;
   transition: all 0.5s ease;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .event__button:hover {
   background-color: var(--dark-red-color);
 }
 
+.event__button:active {
+  background-color: var(--dark-red-color);
+  transform: scale(0.95);
+}
+
 .event__button::after {
   content: ">";
   position: absolute;
-  right: 2px;
-  top: 12px;
-  font-size: 24px;
-  color: var(--white-color);
+  font-size: 18px;
   font-weight: 100;
+  right: 10px;
+
+  
+  
 }
