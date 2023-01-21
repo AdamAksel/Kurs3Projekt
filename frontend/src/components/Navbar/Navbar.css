@@ -23,8 +23,8 @@
   min-width: 100vw;
   overflow: hidden;
   text-decoration: none;
-
-  background-color: #202c39;
+  height: 4rem;
+  background-color: #ffffff;
 }
 
 .Navbar-nav-item {
@@ -56,7 +56,10 @@
   max-height: 180px;
   min-height: 180px;
   background-image: url(https://images.squarespace-cdn.com/content/v1/570d339f8a65e2e984e265fc/1572563255064-HRM7IPO57ZW0CU7B1YJ6/https___cdn.evbuc.com_images_62445254_85974847449_1_original.jpg?format=1000w);
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  opacity: 0.7;
 }
 
 .Navbar-background-image {
@@ -93,3 +96,51 @@
 .lni:hover {
   color: lightblue;
 }
+
+
+/* login icon */
+.login{
+  position: relative;
+  /* font-size: 16px; */
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 20px 15px;
+  border: 1px solid #e8e8e8;
+  outline: none;
+  width: 5.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login:hover{
+ box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+/* .icon{
+  border:none;
+  outline: none;
+
+} */
+
+.iconUser{
+  position: absolute;
+  right: 10px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: xx-large;
+  color: #6c6c6c;
+
+}
+.iconBars{
+  left: 10px;
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #6c6c6c;
+}
+
