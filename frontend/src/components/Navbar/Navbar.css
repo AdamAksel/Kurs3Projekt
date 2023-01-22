@@ -4,9 +4,10 @@
   align-items: center;
   min-height: 50px;
   min-width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   flex-wrap: wrap;
   background-color: #202c39;
+  position: relative;
 }
 
 .Navbar-sticky {
@@ -23,7 +24,6 @@
   min-width: 100vw;
   overflow: hidden;
   text-decoration: none;
-
   background-color: #202c39;
 }
 
@@ -49,6 +49,7 @@
 }
 
 .Navbar-search-image {
+ 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,9 +67,21 @@
 }
 
 .Navbar-search {
+  outline: none;
+  z-index: 20;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.Navbar-search-container {
+  z-index: 20;
+  position: relative;
+  outline: none;
+  height: 100px;
+}
+.search-results {
+  overflow: auto;
+  outline: none;
 }
 
 .Navbar-search-input {
@@ -83,6 +96,7 @@
   right: 8%;
   border-radius: 25px;
   min-height: 40px;
+  
 }
 
 .lni {
