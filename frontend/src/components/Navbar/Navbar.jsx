@@ -4,6 +4,7 @@ import "./Navbar.css";
 import Sidebar from "./Sidebar/Sidebar";
 import { events } from "../event-info";
 import { useState } from "react";
+import StartCards from "../Cards/StartCards";
 
 
 /*
@@ -79,7 +80,7 @@ const Navbar = () => {
                       }
                     })
                     .map((value, key) => {
-                      return <p key={value.date}>{value.artist}</p>;
+                      return <p key={value.date} >{value.artist}</p>;
                     })}
                 </div>
               </form>
