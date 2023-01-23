@@ -7,34 +7,16 @@ import {
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import CalenderCard from "./CalenderCard";
-import {events} from "../event-info";
+import { events } from "../event-info";
 const Calendar = () => {
- 
-
-
-  const [isOpened, setIsOpened] = useState(false);
-
-  const showAndHideCalendar = () => {
-    setIsOpened(!isOpened);
-  };
-
   return (
     <div className="container_calendar">
       <div className="container_calendar_nav">
-        <h1 className="calendar_title">Calendar</h1>
+     
         <div className="calendar_nav">
-          <FontAwesomeIcon
-            icon={faCalendarDays}
-            className="searchIcon"
-            onClick={showAndHideCalendar}
-          />
-        
-          <span className="calendar_log"></span>
         </div>
       </div>
-      <div className="date__range">
-        
-      </div>
+      <div className="date__range"></div>
       <div className="calendar">
         <CalenderCard events={events} />
       </div>
