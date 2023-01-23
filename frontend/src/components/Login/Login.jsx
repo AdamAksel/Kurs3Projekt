@@ -15,16 +15,10 @@ const Login = () => {
     setHideModal(!hideModal);
   };
 
-  // const handleLogging = (e) => {
-  //   e.preventDefault();
-  //   return navigate("/home");
-  // };
   const handleHideModal = () => {
     setHideModal(!hideModal);
-    return navigate("/home");
+    return navigate("/");
   };
-
-
 
   return (
     <>

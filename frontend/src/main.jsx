@@ -1,18 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
-import { SpinnerCircular } from "spinners-react";
-ReactDOM.createRoot(
- 
-  document.getElementById("root")
-).render(
-  
+import Start from "./components/Start/Start";
+import Login from "./components/Login/Login";
+import Calendar from "./components/Calendar/Calendar";
+import Navbar from "./components/Navbar/Navbar";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import "./App.css";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route index element={<Start />} />
+      <Route path="/Calendar" element={<Calendar />} />
+      <Route path="/Login" element={<Login />} />
+    </Route>
+  )
+);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      {/* <SpinnerCircular /> */}
-      <App />
-    </BrowserRouter>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
