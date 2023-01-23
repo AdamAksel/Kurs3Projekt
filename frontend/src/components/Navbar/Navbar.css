@@ -1,30 +1,112 @@
-.Navbar-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50px;
-  min-width: 100vw;
-  overflow: hidden;
-  flex-wrap: wrap;
-  background-color: #202c39;
+.nav_container {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
 }
 
-.Navbar-sticky {
+.navbar__nav {
   position: sticky;
   top: 0;
-  z-index: 100;
-}
-
-.Navbar-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 50px;
-  min-width: 100vw;
-  overflow: hidden;
+  height: 80px;
+  background-color: #ffffff;
+  width: 100%;
   text-decoration: none;
+  z-index: 1;
+}
 
-  background-color: #202c39;
+.calendar_logo {
+  position: absolute;
+  text-decoration: none;
+  font-size: 10px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 12px 10px;
+  border: 1px solid #e8e8e8;
+  color: #6c6c6c;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap : 16px;
+}
+
+.calendar_logo:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.calenderLogo {
+  /* margin: 0 10px; */
+
+  font-size: 28px;
+    color: #2ac52c;
+  /* background-color: #000000; */
+  border-radius: 20%;
+}
+
+
+
+.navbar__nav_container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: #c4c4c4;
+  width: 100%;
+}
+/* logo icon */
+.logo {
+  position: absolute;
+  left: 5rem;
+  top: 0;
+  outline: none;
+  width: 5rem;
+}
+
+
+/* icon login */
+.login {
+  position: absolute;
+  right: 5rem;
+  top: 14px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 25px 0;
+  border: 1px solid #e8e8e8;
+  outline: none;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+.iconUser {
+  position: absolute;
+  right: 10px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-size: 38px;
+  color: #7e7e7e;
+}
+
+.w-6 {
+  position: absolute;
+  left: 10px;
+  color: #000000;
 }
 
 .Navbar-nav-item {
@@ -33,63 +115,78 @@
   align-items: center;
 }
 
-.Navbar-main {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  min-height: 100vh;
-  min-width: 80vw;
-  flex: 1;
-}
-
 .Navbar-div-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.Navbar-search-image {
+.Navbar-header {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin: 0 auto;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100vw;
-  max-height: 180px;
-  min-height: 180px;
-  background-image: url(https://images.squarespace-cdn.com/content/v1/570d339f8a65e2e984e265fc/1572563255064-HRM7IPO57ZW0CU7B1YJ6/https___cdn.evbuc.com_images_62445254_85974847449_1_original.jpg?format=1000w);
-  background-size: cover;
+  border: none !important;
 }
 
-.Navbar-background-image {
-  min-width: 100vw;
-  max-height: 180px;
-  object-fit: cover;
+.Navbar-search-image {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/570d339f8a65e2e984e265fc/1572563255064-HRM7IPO57ZW0CU7B1YJ6/https___cdn.evbuc.com_images_62445254_85974847449_1_original.jpg?format=1000w);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  filter: blur(3px);
 }
 
 .Navbar-search {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #2f2f2f;
 }
 
 .Navbar-search-input {
-  border-radius: 25px;
+  border-radius: 25px 0 0 25px;
   min-height: 40px;
-  min-width: 250px;
-  font-size: larger;
+  width: 400px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
+  font-size: 16px;
+  color: #6c6c6c;
+  outline: none;
 }
 
 .Navbar-search-button {
-  position: relative;
-  right: 8%;
-  border-radius: 25px;
+  top: 25px;
+  border-radius: 0 25px 25px 0;
+  border: none;
+  outline: none;
+  background-color: #2ac52c;
   min-height: 40px;
+  min-width: 90px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.lni {
-  font-size: xx-large;
-  color: #e8e8e8;
-}
-
-.lni:hover {
-  color: lightblue;
+.Navbar-search-button:hover {
+  background-color: #10d32d;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
