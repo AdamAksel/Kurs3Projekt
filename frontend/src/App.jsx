@@ -13,6 +13,7 @@ const router = createBrowserRouter(
       <Route index element={<Start />} />
       <Route path='/Calendar' element={<Calendar />} />
       <Route path='/Login' element={<Login />} />
+      <Route path='/Start' element={<Start />} />
     </Route>
   )
 )

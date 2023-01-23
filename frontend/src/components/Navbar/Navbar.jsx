@@ -1,10 +1,11 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import "./Navbar.css";
 import Sidebar from "./Sidebar/Sidebar";
 import { events } from "../event-info";
 import { useState } from "react";
 import StartCards from "../Cards/StartCards";
+import Start from "../Start/Start";
 
 
 /*
@@ -80,7 +81,13 @@ const Navbar = () => {
                       }
                     })
                     .map((value, key) => {
-                      return <p key={value.date} >{value.artist}</p>;
+                      return (
+                        <a key={value.id} href={`/Start`}>
+                          <p key={value.id}>{value.artist}</p>
+                          </a>
+                        )
+                       
+                      
                     })}
                 </div>
               </form>
