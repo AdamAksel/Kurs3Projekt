@@ -1,51 +1,28 @@
-import { Start, Navbar, Calendar } from "./components";
-import Login from "./components/Login/Login";
-import NotFound from "./components/NotFound";
-import "./App.css";
-import { SpinnerCircular } from "spinners-react";
-
-<SpinnerCircular />;
+import { Start, Navbar, Calendar, Login } from './components'
 import {
-  Routes,
+  createBrowserRouter,
+  createRoutesFromElements,
   Route,
   RouterProvider,
-  createRoutesFromElements,
-  createBrowserRouter,
-  useNavigate,
-  Navigate,
-} from "react-router-dom";
-import React from "react";
-import Spinner from "./components/Spinner";
+} from 'react-router-dom'
+import './App.css'
 
-// const router = createBrowserRouter(
-//   createRoutesFromElements(
-//     <React.Fragment>
-//       <Route path="/" exact element={<Start />} />
-//       <Route path="/Calendar" element={<Calendar />} />
-//       <Route path="Login" element={<Login />} />
-//     </React.Fragment>
-//   )
-// );
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Navbar />}>
+      <Route index element={<Start />} />
+      <Route path='/Calendar' element={<Calendar />} />
+      <Route path='/Login' element={<Login />} />
+    </Route>
+  )
+)
 
 function App() {
   return (
-    <div className="container">
-      <Navbar />
-      <main className="main">
-        <Routes>
-          <Route path="/home" exact element={<Start />} />
-
-          <Route path="/Calendar" element={<Calendar />} />
-
-          <Route path="/Login" element={<Login />} />
-
-          <Route path="/" element={<Navigate replace to="/home" />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        {/* <RouterProvider router={router} /> */}
-      </main>
-    </div>
-  );
+    <>
+      <RouterProvider router={router} />
+    </>
+  )
 }
 
-export default App;
+export default App
