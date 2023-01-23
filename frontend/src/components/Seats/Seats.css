@@ -1,0 +1,41 @@
+.circle{
+    width:200px;
+    height:200px;
+    display:flex;
+    flex-wrap: wrap;
+  }
+  
+  .circle div{
+    height:100px;
+    width:100px;
+  }
+  .middle-circle{
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .circle div:nth-child(1){
+    background-color:red;
+    border-radius:100px 0 0 0;
+  }
+  .circle div:nth-child(2){
+    background-color:green;
+    border-radius:0 100px 0 0;
+  }
+  .circle div:nth-child(3){
+    background-color:yellow;
+    border-radius:0 0 0 100px;
+  }
+  .circle div:nth-child(4){
+    background-color:teal;
+    border-radius:0 0 100px 0;
+  }
+ 
+
