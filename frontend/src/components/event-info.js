@@ -1,4 +1,4 @@
-export const events = [
+export  const events = [
   {
     eventName: 'TestEvent1',
     date: '2023-02-21',
@@ -6,6 +6,17 @@ export const events = [
     tickets: '130',
     info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel risus aliquet orci interdum sollicitudin. In nisl justo, ullamcorper id consectetur ut, convallis nec lorem. Pellentesque feugiat a justo ac scelerisque. Donec porta odio eu mi dignissim vulputate sed egestas nunc. Donec ac erat tincidunt, pellentesque mauris in, blandit ex. Vivamus dignissim, diam non convallis lobortis, enim justo tincidunt enim, vitae ultrices felis turpis a nisl. Aliquam dignissim diam et quam tristique vehicula. Donec laoreet, dui quis volutpat aliquet, dolor purus dictum metus, et faucibus odio dolor eget libero. Integer condimentum, felis ac auctor ullamcorper, nunc ex porttitor massa, vitae maximus magna tortor id dui. Curabitur faucibus nisl sed arcu ornare commodo. Fusce fringilla accumsan lectus id dictum. Quisque tincidunt lobortis fermentum.',
   },
+  {
+      id: 1,
+      title: "Event 1",
+      date: "2021-01-01",
+      description: "Event 1 description",
+      location: "Event 1 location",
+      image: "https://picsum.photos/200/300",
+      category: "Event 1 category",
+      price: 100,
+    },
+  
   {
     eventName: 'TestEvent2',
     date: '2023-04-02',

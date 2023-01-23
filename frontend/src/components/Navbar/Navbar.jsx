@@ -1,7 +1,7 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import "./Navbar.css";
-import Sidebar from "./Sidebar/Sidebar";
+import Sidebar from "../Sidebar/Sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -10,6 +10,11 @@ import {
   faHamburger,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+
+import SearchBar from "./SearchBar";
+import ImageHeader from "./ImageHeader";
+import Calendar from "../Calendar/Calendar";
+import { FaCalendarAlt } from "react-icons/fa";
 
 /*
 <NavLink
@@ -21,51 +26,40 @@ import {
 */
 const Navbar = () => {
   return (
-    <>
-      <header className="Navbar-sticky">
-        <nav className="Navbar-nav">
-          <div className="Navbar-nav-item">
-            <NavLink
-              style={{ color: "inherit", textDecoration: "inherit" }}
-              to="/"
-            >
-              <i className="lni lni-home"></i>
-            </NavLink>
-          </div>
+    <div className="nav_container">
+      <div className="navbar__nav">
+      <NavLink to="/">
+      <img src="../../../public/logo.svg" alt="vegas"  className="logo"/>
+      </NavLink>
 
-          <NavLink
-            style={{ color: "inherit", textDecoration: "inherit" }}
-            to="/Calendar"
-          >
-            <i class="lni lni-calendar"></i>
-          </NavLink>
-          <NavLink
-            style={{ color: "inherit", textDecoration: "inherit" }}
-            to="/Login"
-          >
-            <div className="login">
-              <FontAwesomeIcon icon={faCircleUser} className="icon iconUser" />
-              <FontAwesomeIcon icon={faBars} className="icon iconBars" />
-            </div>
-            {/* <i class="lni lni-user"></i> */}
-          </NavLink>
-        </nav>
-      </header>
-      <header className="Navbar-header">
-        <div className="Navbar-search-image">
-          <div className="Navbar-search">
-            <input className="Navbar-search-input" />
-            <button className="Navbar-search-button">Search</button>
+        <NavLink to="/calendar" className="calendar_logo">
+          <FaCalendarAlt className="calenderLogo" />
+          <Calendar />
+        </NavLink>
+        <NavLink to="/Login">
+          <div className="login">
+            <FontAwesomeIcon icon={faCircleUser} className="icon iconUser" />
+        
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 75 20"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
           </div>
-        </div>
-      </header>
-      <div className="Navbar-div-container">
-        <Sidebar />
-        <main className="Navbar-main">
-          <Outlet />
-        </main>
+        </NavLink>
       </div>
-    </>
+
+      <ImageHeader />
+    </div>
   );
 };
 
