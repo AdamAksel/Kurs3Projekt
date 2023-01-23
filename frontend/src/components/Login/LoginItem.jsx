@@ -2,7 +2,7 @@ import React from "react";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
 import "./Login.css";
 
-export default function LoginItem({ handleLogging, handleHideModal, handleModal }) {
+export default function LoginItem({handleHideModal, handleModal }) {
   return (
     <>
     <div className="Login" onClick={handleHideModal}></div>

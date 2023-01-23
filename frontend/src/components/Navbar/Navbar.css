@@ -1,3 +1,4 @@
+
 .nav_container {
   position: relative;
   top: 0;
@@ -42,11 +43,8 @@
 }
 
 .calenderLogo {
-  /* margin: 0 10px; */
-
   font-size: 28px;
     color: #2ac52c;
-  /* background-color: #000000; */
   border-radius: 20%;
 }
 
@@ -114,6 +112,44 @@
   justify-content: center;
   align-items: center;
 }
+
+
+.Navbar-nav {
+  width: 100%;
+  min-width: 600px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #000;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.Navbar-nav ul {
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+
+}
+.Navbar-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+
+.Navbar-nav ul li {
+  margin: 0 3rem;
+}
+
 
 .Navbar-div-container {
   display: flex;

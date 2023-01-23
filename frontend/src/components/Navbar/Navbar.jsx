@@ -1,3 +1,4 @@
+
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
@@ -7,14 +8,7 @@ import ImageHeader from "./ImageHeader";
 import Calendar from "../Calendar/Calendar";
 import { FaCalendarAlt } from "react-icons/fa";
 
-/*
-<NavLink
-              style={{ color: 'inherit', textDecoration: 'inherit' }}
-              to='/'
-            >
-              <i className='lni lni-home'></i> Home
-            </NavLink>
-*/
+
 const Navbar = () => {
   return (
     <div className="nav_container">
@@ -25,7 +19,6 @@ const Navbar = () => {
 
         <NavLink to="/Calendar" className="calendar_logo">
           <FaCalendarAlt className="calenderLogo" />
-          <Calendar />
         </NavLink>
         <NavLink to="/Login">
           <div className="login">
@@ -53,5 +46,4 @@ const Navbar = () => {
     </div>
   );
 };
-
 export default Navbar;

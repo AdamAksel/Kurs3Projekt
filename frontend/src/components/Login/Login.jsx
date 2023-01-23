@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { BsGoogle, BsFacebook } from "react-icons/bs";
 import {useNavigate } from "react-router";
-import { hi } from "date-fns/locale";
 import LoginItem from "./LoginItem";
 
 const Login = () => {
