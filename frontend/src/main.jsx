@@ -14,6 +14,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
+import EventsInfo from "./components/EventsInfo/EventsInfo";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route index element={<Start />} />
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/EventsInfo" element={<EventsInfo />} />
     </Route>
   )
 );
