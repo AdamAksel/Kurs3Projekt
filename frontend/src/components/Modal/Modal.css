@@ -10,30 +10,36 @@ body.active-modal {
     font-size: 18px;
     cursor: pointer;
 }
+
 .div-modal:hover {
     text-decoration: underline;
 }
 
 
-.modal, .overlay {
-    width: 100vw;
-    height: 100vh;
+.modal,
+.overlay {
+    max-width: 100vw;
+    max-height: 100vh;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     position: fixed;
+    z-index: 1;
 }
+
 .modal {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+
 }
 
 .overlay {
-    background: rgba(49,49,49,0.8);
+    background: rgba(49, 49, 49, 0.8);
     z-index: -10;
 }
+
 .modal-content {
     display: flex;
     align-items: center;
@@ -42,11 +48,12 @@ body.active-modal {
     color: #E8E8E8;
     padding: 14px 28px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 700px;
     min-width: 300px;
     overflow: auto;
-    height: 75vh;
+    height: 65vh;
     margin-top: 4vh;
+    overflow-x: hidden;
 }
 
 .close-modal {
@@ -55,30 +62,78 @@ body.active-modal {
     right: 10px;
     padding: 5px 7px;
     cursor: pointer;
+    color: #FFFFFF;
 }
+
 .close-modal:hover {
     text-decoration: underline;
 }
+
 #chris {
     height: 400px;
     width: 300px;
+    object-fit: cover;
 }
+
 #modal-pic {
     height: fit-content;
     width: fit-content;
 }
+
 .modal-div {
     font-size: 30px;
     padding-right: 4vw;
 }
+
 .modal-text {
     display: flex;
     flex-direction: column;
-    justify-content:flex-start;
-    align-items:center;
-    padding-left: 4vw;
-    min-height: 60vh;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    padding-left: 3vw;
+    min-height: 50vh;
 }
-.modal-info {
-    padding-top: 3vh;
+
+@media only screen and (max-width: 450px) {
+    .modal-content {
+        width: 90%;
+        flex-direction: column;   
+    }
+
+    #chris {
+        height: 200px;
+        width: 150px;
+
+    }
+
+    .modal-text {
+        flex-direction: column;
+        justify-content: flex-start;
+        min-height: 0vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    #chris {
+        height: 200px;
+        width: 150px;
+
+    }
+
+    .modal-content {
+        height: 40vh;
+    }
+
+    .modal-text {
+        min-height: 0vh;
+        font-size: smaller;
+        padding-left: 7vw;
+        padding-top: 2vh;
+    }
+
 }
