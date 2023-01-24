@@ -1,11 +1,13 @@
 import React from "react";
 import { BsFacebook, BsGoogle } from "react-icons/bs";
+import InputDynamic from "./InputDynamic";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
-export default function LoginItem({handleHideModal, handleModal }) {
+export default function LoginItem({ handleHideModal, handleModal }) {
   return (
     <>
-    <div className="Login" onClick={handleHideModal}></div>
+      <div className="Login" onClick={handleHideModal}></div>
       <div className="Login-container">
         <div className="Login-header"></div>
         <div className="Login-form">
@@ -14,28 +16,23 @@ export default function LoginItem({handleHideModal, handleModal }) {
           <h1 className="welcome"> Welcome </h1>
           <form onSubmit={handleModal}>
             <div className="Login-form-group">
-              <input
-                className="Login-form-input"
+              <InputDynamic
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Email@example.com"
+                placeholder="email@example.com"
               />
-
-              <input
-                className="Login-form-input"
+              <InputDynamic
                 type="password"
                 name="password"
                 id="password"
                 placeholder="Password"
               />
             </div>
-            <button className="Login-form-button" >
-              Log in
-            </button>
+            <button className="Login-form-button">Log in</button>
 
             <div className="Login-form-group">
-              <p className="Login-form-text">Don't have an account? Sign up</p>
+              <p className="Login-form-text">Don't have an account? <Link to="/signup">SingUp</Link></p>
             </div>
             <div className="or">
               <div className="line-2"></div>
@@ -55,7 +52,6 @@ export default function LoginItem({handleHideModal, handleModal }) {
           </form>
         </div>
       </div>
-    
     </>
   );
 }
