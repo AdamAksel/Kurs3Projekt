@@ -1,4 +1,3 @@
-
 .nav_container {
   position: relative;
   top: 0;
@@ -6,49 +5,59 @@
   height: 100%;
   background-color: #ffffff;
   margin: 0 auto;
+  z-index: 1;
+  margin-bottom: 50px;
+}
+.search_button {
+  position: relative;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 580px;
 }
 
 .navbar__nav {
-  position: sticky;
-  top: 0;
   display: flex;
-  justify-content: space-around;
+  position: sticky;
+  bottom: 0;
+  justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
   height: 80px;
   background-color: #ffffff;
-  width: 100%;
+  max-width: 180rem;
   text-decoration: none;
   z-index: 1;
 }
 
 .calendar_logo {
-  position: absolute;
   text-decoration: none;
   font-size: 10px;
   background-color: #ffffff;
   border-radius: 30px;
-  padding: 12px 10px;
+  padding: 16px;
   border: 1px solid #e8e8e8;
-  color: #6c6c6c;
   outline: none;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  gap : 16px;
 }
 
 .calendar_logo:hover {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
+
+
 
 .calenderLogo {
   font-size: 28px;
-    color: #2ac52c;
+  color: #2ac52c;
   border-radius: 20%;
 }
-
-
 
 .navbar__nav_container {
   position: absolute;
@@ -60,36 +69,30 @@
   width: 100%;
 }
 /* logo icon */
-.logo {
-  position: absolute;
-  left: 5rem;
-  top: 0;
+.navbar__nav__logo__icon {
   outline: none;
-  width: 5rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
 }
-
 
 /* icon login */
 .login {
-  position: absolute;
-  right: 5rem;
-  top: 14px;
+  position: relative;
   background-color: #ffffff;
   border-radius: 30px;
-  padding: 25px 0;
+  padding: 26px;
   border: 1px solid #e8e8e8;
   outline: none;
-  width: 6rem;
+  width: 11rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .login:hover {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 }
-
-
 
 .iconUser {
   position: absolute;
@@ -103,8 +106,8 @@
 
 .w-6 {
   position: absolute;
-  left: 10px;
   color: #000000;
+  left: 10px;
 }
 
 .Navbar-nav-item {
@@ -112,7 +115,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .Navbar-nav {
   width: 100%;
@@ -132,7 +134,6 @@
   align-items: center;
   justify-content: space-around;
   list-style: none;
-
 }
 .Navbar-nav a {
   color: #fff;
@@ -142,14 +143,11 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-
 }
-
 
 .Navbar-nav ul li {
   margin: 0 3rem;
 }
-
 
 .Navbar-div-container {
   display: flex;
@@ -185,32 +183,31 @@
 }
 
 .Navbar-search {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
   width: 100%;
-  height: 100%;
-  border: 1px solid #2f2f2f;
 }
 
 .Navbar-search-input {
+  position: absolute;
   border-radius: 25px 0 0 25px;
   min-height: 40px;
   width: 400px;
   background-color: #ffffff;
-  border: 1px solid #e8e8e8;
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 0 20px;
   font-size: 16px;
   color: #6c6c6c;
+  border: none;
   outline: none;
 }
 
 .Navbar-search-button {
-  top: 25px;
+  position: absolute;
   border-radius: 0 25px 25px 0;
+  right: 0;
   border: none;
   outline: none;
   background-color: #2ac52c;
@@ -220,9 +217,115 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1;
 }
 
 .Navbar-search-button:hover {
   background-color: #10d32d;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar__nav__home{
+display: none;
+}
+@media (max-width: 768px) {
+  .iconUser {
+    color: #bdbdbd;
+    padding: 14px;
+    border-radius: 30px;
+  }
+
+  .calendar_logo {
+    border: none;
+  }
+
+  .calenderLogo {
+    color: #bdbdbd;
+    background-color: #ffffff;
+    font-size: 35px;
+  }
+
+  .navbar__nav {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
+    position: fixed !important;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    z-index: 100;
+  }
+.navbar__nav__home{
+display: block;
+}
+  .home_icon {
+    font-size: 35px;
+    color: #bdbdbd;
+    margin-left: 30px;
+
+  }
+
+  .home_icon:hover{
+    padding: 14px;
+    border-radius: 40px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .navbar__nav__logo {
+    display: none;
+  }
+
+  .navbar__nav__logo__icon {
+    display: none;
+  }
+
+  .w-6 {
+    display: none !important;
+  }
+
+  .login {
+    border: none;
+    padding: 0;
+  }
+
+  .iconUser:hover {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .Navbar-search-image {
+    display: none;
+  }
+  .Navbar-header {
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    position: fixed !important;
+    top: 0;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
+    z-index: 100;
+  }
+
+  .Navbar-search-input {
+    padding: 15px 20px;
+    border-radius: 25px;
+    width: 90%;
+    background-color: #ffffff;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .Navbar-search-button {
+    display: none;
+  }
+
+  .searchIcon_search {
+    position: absolute;
+    background-color: red;
+    right: 7%;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    z-index: 2;
+  }
 }

@@ -8,9 +8,8 @@ export default function LoginItem({ handleHideModal, handleModal }) {
   return (
     <>
       <div className="Login" onClick={handleHideModal}></div>
-      <div className="Login-container">
-        <div className="Login-header"></div>
         <div className="Login-form">
+        <div className="Login-form-container">
           <h1 className="Login-title">Log in or sign up</h1>
           <div className="line-1"></div>
           <h1 className="welcome"> Welcome </h1>

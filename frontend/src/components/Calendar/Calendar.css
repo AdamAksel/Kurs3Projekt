@@ -1,5 +1,3 @@
-
-
 :root {
   --primary-color: #ff6b81;
   --secondary-color: #616161;
@@ -16,13 +14,13 @@
   --dark-blue-color: #0288d1;
   --light-orange-color: #ff9800;
   --dark-orange-color: #f57c00;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
 }
-
 
 .container_calendar {
   margin-top: 70px;
   width: 100%;
-  max-width: 1200px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -42,6 +40,25 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
 }
 
 .calendar_title {
@@ -116,17 +133,30 @@
   align-items: center;
   flex-direction: column;
 }
+h1 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.date_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
 .container__calendar__Card {
   position: relative;
   height: 160px;
-  width: 45rem;
+  width: 70rem;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   background: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  gap: 10px;
+  gap: 20px;
 }
 
 /*! Date Calendar Card  */
@@ -140,10 +170,10 @@
   padding: 20px 0 0 10px;
 }
 
-.arrow{
+.arrow {
   position: absolute;
-left: 3.5rem;
-top: 3.8rem;
+  left: 5.5rem;
+  top: 4.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,8 +185,6 @@ top: 3.8rem;
   cursor: pointer;
   transition: all 0.5s ease;
 }
-
-
 
 .event__date_day {
   font-size: 10px;
@@ -170,7 +198,6 @@ top: 3.8rem;
   color: var(--secondary-color);
   text-transform: uppercase;
   line-height: 1.2;
-
 }
 
 .event__month_year {
@@ -197,7 +224,7 @@ top: 3.8rem;
 
 /*! images Calendar Card  */
 .event__image {
-  width: 12rem;
+  width: 30rem;
   height: 100%;
   padding: 10px 0;
   margin: 0;
@@ -221,7 +248,9 @@ top: 3.8rem;
 
 .event__title {
   position: absolute;
-  top: 20px;
+  display: inline;
+  margin: 0 16px;
+  top: 10px;
   font-size: 16px;
   font-weight: 600;
   color: var(--secondary-color);
@@ -246,7 +275,7 @@ top: 3.8rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  bottom: 20px;
+  bottom: 0;
 }
 
 .event__location span {
@@ -260,20 +289,15 @@ top: 3.8rem;
   color: var(--light-grey-color);
 }
 
- /*! Event Calendar Card payments button  */
+/*! Event Calendar Card payments button  */
 
 .event__payment__button {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  
   height: 100%;
   padding: 18px;
-  
-
   width: 16rem;
-
-
 }
 
 .event__button {
@@ -309,7 +333,156 @@ top: 3.8rem;
   font-size: 18px;
   font-weight: 100;
   right: 10px;
+}
+.highlight {
+  position: absolute;
+  z-index: 1;
+  font-weight: bolder;
+}
 
-  
-  
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.2, 1.1) skewX(-15deg);
+  background-image: var(--gradient-primary);
+}
+
+@media (max-width: 768px) {
+  .container_calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+
+  }
+  .container__calendar__Card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+    gap: 0;
+  }
+  .event__image {
+    width: 100%;
+    height: 12rem;
+  }
+  .event__info {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+  }
+  .event__description {
+    top: 20px;
+    margin-bottom: 30px;
+  }
+  .event__location {
+    bottom: 40px;
+  }
+  .event__payment__button {
+    width: 100%;
+    padding: 10px;
+  }
+  .event__button {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .event__button::after {
+    right: 5px;
+    top: 5px;
+  }
+  .arrow {
+    display: none;
+  }
+
+  .event__date {
+    top: 0;
+    width: 20%;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+  }
+
+  .date_card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 40px;
+    margin: 0;
+    padding: 0 ;
+
+  }
+
+  .event__date__time {
+    margin: 0;
+  }
+
+  .container_calendar_nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #d72121;
+  }
+
+  .event__title {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    row-gap: 3rem;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+    justify-items: start;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+  }
+  .highlight {
+    z-index: 0;
+    position: absolute;
+    
+  }
+
+  .highlight::after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    transform: scale(1.2, 1.1) skewX(-15deg);
+    background-image: var(--gradient-primary);
+  }
+
+  .event__image {
+    width: 100%;
+    height: 22rem;
+    padding:  0;
+    margin: 0;
+  }
+
+
 }

@@ -21,14 +21,9 @@ const Calendar = () => {
   return (
     <div className="container_calendar">
       <div className="container_calendar_nav">
-        <h1 className="calendar_title">Calendar</h1>
+        <h1 className="calendar_title">Sort by:</h1>
         <div className="calendar_nav">
-          <FontAwesomeIcon
-            icon={faCalendarDays}
-            className="searchIcon"
-            onClick={showAndHideCalendar}
-          />
-        
+
           <span className="calendar_log"></span>
         </div>
       </div>
