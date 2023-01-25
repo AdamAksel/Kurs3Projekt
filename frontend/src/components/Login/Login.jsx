@@ -19,13 +19,13 @@ const Login = () => {
   };
 
   return (
-    <>
+    <div className="login_container">
     {hideModal ? (
       <LoginItem  handleHideModal = {handleHideModal} handleModal={handleModal}/>
     ) : ""}
 
   
-    </>
+    </div>
   );
 };
 
