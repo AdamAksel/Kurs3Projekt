@@ -7,6 +7,7 @@ import Login from "./components/Login/Login";
 import Calendar from "./components/Calendar/Calendar";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Seats from "./components/Seats/Seats";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route index element={<Start />} />
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/Seats" element={<Seats />} />
     </Route>
   )
 );
