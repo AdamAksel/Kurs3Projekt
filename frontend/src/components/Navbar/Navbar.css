@@ -8,6 +8,7 @@
   z-index: 1;
   margin-bottom: 50px;
 }
+
 .search_button {
   position: relative;
   right: 0;
@@ -68,6 +69,7 @@
   background-color: #c4c4c4;
   width: 100%;
 }
+
 /* logo icon */
 .navbar__nav__logo__icon {
   outline: none;
@@ -128,6 +130,7 @@
   font-weight: 600;
   text-decoration: none;
 }
+
 .Navbar-nav ul {
   max-width: 600px;
   display: flex;
@@ -135,6 +138,7 @@
   justify-content: space-around;
   list-style: none;
 }
+
 .Navbar-nav a {
   color: #fff;
   text-decoration: none;
@@ -182,13 +186,6 @@
   filter: blur(3px);
 }
 
-.Navbar-search {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 
 .Navbar-search-input {
   position: absolute;
@@ -224,9 +221,11 @@
   background-color: #10d32d;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.navbar__nav__home{
-display: none;
+
+.navbar__nav__home {
+  display: none;
 }
+
 @media (max-width: 768px) {
   .iconUser {
     color: #bdbdbd;
@@ -256,9 +255,11 @@ display: none;
     margin: 0;
     z-index: 100;
   }
-.navbar__nav__home{
-display: block;
-}
+
+  .navbar__nav__home {
+    display: block;
+  }
+
   .home_icon {
     font-size: 35px;
     color: #bdbdbd;
@@ -266,7 +267,7 @@ display: block;
 
   }
 
-  .home_icon:hover{
+  .home_icon:hover {
     padding: 14px;
     border-radius: 40px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
@@ -296,6 +297,7 @@ display: block;
   .Navbar-search-image {
     display: none;
   }
+
   .Navbar-header {
     height: 70px;
     background-color: rgb(255, 255, 255);
@@ -331,14 +333,34 @@ display: block;
 }
 
 .search-results {
-  max-height: 200px;
-  color: rgb(255, 255, 255);
+  max-height: 195px;
+  width: 387px;
+  color: #E8E8E8;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 80%;
+  margin-top: -19px;
+  margin-left: 14px;
   overflow-y: scroll;
   font-size: 20px;
-  background: linear-gradient(from top to bottom left, #000, #000 );
-  box-shadow: 4px 4px 10px 4px #000;
+  background: #202C39;
+  box-shadow: 1px 10px 10px 1px #e8e8e8;
+  border-radius: 3px;
+}
+.search-results::-webkit-scrollbar-thumb {
+  background-color: #334757;
+}
+.search-results-links {
+  color: #E8E8E8;
+}
+.Navbar-search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ flex-direction: column;
+  width: 100%;
+}
+.nene {
+  position:absolute;
+  top: 20%;
 }

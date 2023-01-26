@@ -21,6 +21,12 @@ const router = createBrowserRouter(
       <Route index element={<Start />} />
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
+      <Route
+          path="/search-results/:date"
+          render={(props) => (
+            <SearchResults events={events} {...props} />
+          )}
+        />
     </Route>
   )
 );
