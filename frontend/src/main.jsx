@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import Start from "./components/Start/Start";
+import Event from "./components/Event/Event";
 import Login from "./components/Login/Login";
 import Calendar from "./components/Calendar/Calendar";
 import Navbar from "./components/Navbar/Navbar";
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route index element={<Start />} />
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/Event/:id" element={<Event />} />
     </Route>
   )
 );
