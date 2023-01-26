@@ -1,8 +1,12 @@
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
+import { useState } from 'react';
+import './Navbar.css'
 
-export const SearchInput = ({ events }) => {
+
+
+export default function SearchInput ({ events }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
@@ -28,7 +32,7 @@ export const SearchInput = ({ events }) => {
       </div>
       <div className="search-results">
         {searchResults.length === 0 ? <p>No results found</p> : searchResults.map(event => (
-          <div key={event.id}>{event.artist}</div>
+          <div key={event.date}>{event.artist}</div>
         ))}
       </div>
     </div>

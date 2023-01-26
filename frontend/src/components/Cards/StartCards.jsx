@@ -1,7 +1,6 @@
 import "./StartCards.css";
 
 const StartCards = (props) => {
-  console.log(props);
   return (
     <section className="cards-container">
       <div style={{ position: "relative", outline: "none" }}>
