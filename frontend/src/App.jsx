@@ -1,6 +1,6 @@
-import React from "react";
-import { Navbar } from "./components";
-import { Outlet } from "react-router";
+import React from 'react'
+import { Navbar } from './components'
+import { Outlet } from 'react-router'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Navbar />
       <Outlet />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
