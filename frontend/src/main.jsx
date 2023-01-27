@@ -15,6 +15,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
+import SearchInput from "./components/Navbar/SearchInput";
+import { events } from "./components/event-info";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,9 +26,9 @@ const router = createBrowserRouter(
       <Route path="/Login" element={<Login />} />
       <Route path="/Event/:id" element={<Event />} />
       <Route
-          path="/search-results/:date"
+          path="/search-results/:id"
           render={(props) => (
-            <SearchResults events={events} {...props} />
+            <SearchInput events={events} {...props} />
           )}
         />
         
