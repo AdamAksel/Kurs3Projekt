@@ -19,16 +19,6 @@ export default function SearchInput({ events }) {
       return;
     }
 
-    // let arrayTest = [];
-    // for (let i = 0; i < events.length; i++) {
-      
-    //   if (events[i].artist.toLowerCase().includes(searchTerm)) {
-    //     arrayTest.push({ value: events[i].artist, id: events[i].id });
-    //   }
-    //   if (events[i].eventName.toLowerCase().includes(searchTerm)) {
-    //     arrayTest.push({ value: events[i].eventName, id: events[i].id });
-    //   }
-    // }
 
     let filteredEvents = [];
     events.forEach((element) => {
@@ -41,7 +31,7 @@ export default function SearchInput({ events }) {
         filteredEvents.push({ value: element.eventName, id: element.id });
       }
     });
-    console.log(filteredEvents);
+
     setSearchResults(filteredEvents);
   };
 
