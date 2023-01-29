@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import InputDynamic from "../Login/InputDynamic";
 import "./SignUp.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
-  return (
-    <div className="signup_container">
+const [isOpened, setIsOpened] = useState(false);
+
+const navigate = useNavigate();
+
+const handleHideModal = () => {
+  setIsOpened(!isOpened);
+  return navigate("/");
+};
+
+  return ( !isOpened &&  <div className="signup_container"  >
       <div className="signup_container_form">
         <div className="signup_container_form_fields">
           <img className="signup_container_form_logo_title" src="./logo.svg" /> 
@@ -25,6 +33,7 @@ export default function SignUp() {
                 placeholder="Last name"
               />
             </div>
+            
             <div className="signup_email_password">
               <InputDynamic
                 type="email"
@@ -63,7 +72,9 @@ export default function SignUp() {
             </div>
           </div>
         </div>
+        <span className="close" onClick={handleHideModal}>x</span>
         <div className="signup_container_form_logo">
+        
           <div className="signup_container_logo">
           <span className="highlight_logo">World</span>
           <br />

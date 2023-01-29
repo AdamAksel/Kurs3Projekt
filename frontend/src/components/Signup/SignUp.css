@@ -53,13 +53,14 @@
   margin-bottom: 2rem;
 }
 
-.signup_first_last_name::after {
+.close {
   position: absolute;
-  content: "X";
-  right: 1rem;
-  top: 0;
-  font-size: 2.2rem;
-  font-weight: 900;
+  top:-1.5rem;
+  font-size: 3.6rem;
+  right: 0.7rem;
+  font-weight: 500;
+  z-index: 1;
+  color: #ededed;
   cursor: pointer;
 }
 
@@ -131,7 +132,6 @@
 #email:focus,
 #password:focus,
 #confirm_password:focus {
-  /* outline: none; */
   border: 2px solid var(--light-blue-color);
 }
 
@@ -174,7 +174,6 @@
 }
 
 .signup_container_form_logo {
-  /* position: absolute; */
   background-image: url("./image/backgound-black.jpg?format");
   background-size: cover !important;
   background-position: center;
@@ -185,7 +184,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  /* border-radius: 1rem; */
   border: none;
   outline: none;
 }
@@ -213,34 +211,25 @@
   background-image: var(--gradient-primary);
 }
 
-
-@media(max-width: 768px) {
-  .signup_container{
-width: 100%;
-height: 100%;
-
-    /* grid-template-rows: 1fr 1fr; */
+@media (max-width: 768px) {
+  .signup_container {
+    width: 100%;
+    height: 100%;
   }
-.signup_container_form{
-  /* height: 100%; */
-  display: grid;
-  grid-template-columns:1fr;
-  grid-template-rows: 1fr;
+  .signup_container_form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 
-}
-
-
-.signup_container_form_fields {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 0 2rem;
-  gap: 0;
-  max-width: 50rem;
-  background-color: var(--white-color);
-
-
-
-}
+  .signup_container_form_fields {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+    gap: 0;
+    max-width: 50rem;
+    background-color: var(--white-color);
+  }
 
   .signup_first_last_name {
     flex-direction: column;
@@ -251,7 +240,7 @@ height: 100%;
 
   .signup_email_password {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr ;
+    grid-template-rows: 1fr;
     padding: 0;
     margin: 0;
     grid-gap: 1rem;
@@ -277,7 +266,11 @@ height: 100%;
   .signup_container_form_group_password {
     font-size: 14px;
   }
-  #first_name, #last_name, #email, #password, #confirm_password {
+  #first_name,
+  #last_name,
+  #email,
+  #password,
+  #confirm_password {
     padding: 5px;
     border-radius: 5px;
     font-size: 16px;
@@ -285,7 +278,11 @@ height: 100%;
     border: 3px solid var(--light-grey-color);
     padding: 1rem;
   }
-  #first_name:focus, #last_name:focus, #email:focus, #password:focus, #confirm_password:focus {
+  #first_name:focus,
+  #last_name:focus,
+  #email:focus,
+  #password:focus,
+  #confirm_password:focus {
     outline: none;
     border: 1px solid var(--dark-blue-color);
   }
@@ -357,5 +354,4 @@ height: 100%;
     font-weight: 900;
     cursor: pointer;
   }
-  
 }
