@@ -364,3 +364,10 @@
   position:absolute;
   top: 20%;
 }
+@media screen and (max-width: 768px) {
+  .search-results {
+    max-width: 200px;
+    background-color: #E8E8E8;
+    color: rgb(19, 18, 18);
+  }
+}
