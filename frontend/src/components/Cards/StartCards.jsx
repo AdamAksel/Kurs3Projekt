@@ -2,7 +2,6 @@ import './StartCards.css'
 import { NavLink } from 'react-router-dom'
 
 const StartCards = (props) => {
-
   return (
     <>
       <NavLink
