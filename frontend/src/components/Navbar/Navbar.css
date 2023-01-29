@@ -366,8 +366,18 @@
 }
 @media screen and (max-width: 768px) {
   .search-results {
-    max-width: 200px;
+    width: 300px;
     background-color: #E8E8E8;
     color: rgb(19, 18, 18);
+    box-shadow: 1px 8px 7px 1px #e8e8e8;
+  }
+  .search-results-links {
+    color: #283845;
+  }
+  .search-results::-webkit-scrollbar-thumb {
+    background-color: #FFFFFF;
+  }
+  .search_button {
+    width: 390px;
   }
 }
