@@ -186,13 +186,12 @@
   width: 400px;
   background-color: #ffffff;
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 0 70px;
-  font-size: 16px;
-  color: #e41010;
+  padding: 0 20px;
+  font-size: 18px;
+  color: #000000;
   border: none;
   outline: none;
   transition: all 0.3s ease;
-  /* z-index: 100; */
 }
 .searchIcon_search {
   position: absolute;
