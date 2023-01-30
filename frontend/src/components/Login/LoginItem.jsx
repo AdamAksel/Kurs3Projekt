@@ -31,7 +31,7 @@ export default function LoginItem({ handleHideModal, handleModal }) {
             <button className="Login-form-button">Log in</button>
 
             <div className="Login-form-group">
-              <p className="Login-form-text">Don't have an account? <Link to="/signup">SingUp</Link></p>
+              <p className="Login-form-text">Don't have an account? <Link to="/signup">Signup</Link></p>
             </div>
             <div className="or">
               <div className="line-2"></div>
