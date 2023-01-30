@@ -1,25 +1,23 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { Navigate } from 'react-router';
+import SeatArena from './SeatArena';
 import "./Seats.css";
 
-const Seats = () => {
-  return (
-    <>
-    <div className="seatPage">
-    <h1>Seats</h1>
 
-     <div className='seat-container'>
-        <div className="seat-column-1">SEKT 1</div>
-        <div className="seat-column-2">
-        <div className='seat-middle-column-1'>SCEN</div>
-        <div className='seat-middle-column-2'>STÅ</div>
-        <div className='seat-middle-column-3'>SEKT 3</div>
-        </div>
-        <div className="seat-column-1">SEKT 2</div>
-     </div>
-  </div> 
-    <div className="seatBody">
+
+/*{
+  (screen === 0 ? (<div>todays events</div>) : (<div>recently added</div>))
+}*/
+
+
+
+const Seats = () => {
+   
+    return( <>
+     
+     <div className="seatBody">
         <div className="seatText">
-          <h1>Please select a seat</h1>
+          <h1>Select Seats</h1>
         </div>
         
         <ol className="cabin sideLine">
@@ -304,7 +302,10 @@ const Seats = () => {
             </ol>
           </li>
         </ol>
+        <button className='seatSubmitButton'>CHOOSE</button>
       </div>
+      
+    
          
     
     </>

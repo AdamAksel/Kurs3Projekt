@@ -15,6 +15,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
+import SeatArena from "./components/Seats/SeatArena";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +23,8 @@ const router = createBrowserRouter(
       <Route index element={<Start />} />
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
-      <Route path="/Seats" element={<Seats />} />
+      <Route path="/arenaSeats/seats" element={<Seats />} />
+      <Route path="/arenaSeats" element={<SeatArena />} />
     </Route>
   )
 );
