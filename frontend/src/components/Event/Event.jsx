@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Event.css'
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import { events } from '../event-info'
 
 const Event = () => {
@@ -58,28 +58,12 @@ const Event = () => {
                   className='Event-artists-img'
                   style={{ backgroundImage: `url(${eventInfo.image})` }}
                 ></div>
-                <h3>{eventInfo.artist}</h3>
-              </div>
-              <div className='Event-artists-row'>
-                <div
-                  className='Event-artists-img'
-                  style={{ backgroundImage: `url(${eventInfo.image})` }}
-                ></div>
-                <h3>{eventInfo.artist}</h3>
-              </div>
-              <div className='Event-artists-row'>
-                <div
-                  className='Event-artists-img'
-                  style={{ backgroundImage: `url(${eventInfo.image})` }}
-                ></div>
-                <h3>{eventInfo.artist}</h3>
-              </div>
-              <div className='Event-artists-row'>
-                <div
-                  className='Event-artists-img'
-                  style={{ backgroundImage: `url(${eventInfo.image})` }}
-                ></div>
-                <h3>{eventInfo.artist}</h3>
+                <NavLink
+                  to={`/Artist/${eventInfo.artist}`}
+                  className='Event-navlink'
+                >
+                  <h3>{eventInfo.artist}</h3>
+                </NavLink>
               </div>
             </div>
           </div>

@@ -1,139 +1,134 @@
 body.active-modal {
-    overflow-y: hidden;
-    overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 .div-modal {
-    padding: 10px 20px;
-    display: block;
-    margin: 100px auto 0;
-    font-size: 18px;
-    cursor: pointer;
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .div-modal:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 .modal,
 .overlay {
-    max-width: 100vw;
-    max-height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
-    z-index: 1;
+  max-width: 100vw;
+  max-height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1;
 }
 
 .modal {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay {
-    background: rgba(49, 49, 49, 0.8);
-    z-index: -10;
+  background: rgba(49, 49, 49, 0.8);
+  z-index: -10;
 }
 
 .modal-content {
-    display: flex;
-    align-items: center;
-    line-height: 1.4;
-    background: #202C39;
-    color: #E8E8E8;
-    padding: 14px 28px;
-    border-radius: 10px;
-    max-width: 700px;
-    min-width: 300px;
-    overflow: auto;
-    height: 65vh;
-    margin-top: 4vh;
-    overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  background: #202c39;
+  color: #e8e8e8;
+  padding: 14px 28px;
+  border-radius: 10px;
+  max-width: 700px;
+  min-width: 300px;
+  overflow: auto;
+  height: 65vh;
+  margin-top: 4vh;
+  overflow-x: hidden;
 }
 
 .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 7px;
-    cursor: pointer;
-    color: #FFFFFF;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+  cursor: pointer;
+  color: #ffffff;
 }
 
 .close-modal:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #chris {
-    height: 400px;
-    width: 300px;
-    object-fit: cover;
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
 }
 
 #modal-pic {
-    height: fit-content;
-    width: fit-content;
+  height: fit-content;
+  width: fit-content;
 }
 
 .modal-div {
-    font-size: 30px;
-    padding-right: 4vw;
+  font-size: 30px;
+  padding-right: 4vw;
 }
 
 .modal-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
-    padding-left: 3vw;
-    min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  padding-left: 3vw;
+  min-height: 50vh;
 }
 
 @media only screen and (max-width: 450px) {
-    .modal-content {
-        width: 90%;
-        flex-direction: column;   
-    }
+  .modal-content {
+    width: 90%;
+    flex-direction: column;
+  }
 
-    #chris {
-        height: 200px;
-        width: 150px;
+  #chris {
+    height: 200px;
+    width: 150px;
+  }
 
-    }
-
-    .modal-text {
-        flex-direction: column;
-        justify-content: flex-start;
-        min-height: 0vh;
-    }
+  .modal-text {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 0vh;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    .modal-content {
-        width: 90%;
-    }
+  .modal-content {
+    width: 90%;
+  }
 
-    #chris {
-        height: 200px;
-        width: 150px;
+  #chris {
+    height: 200px;
+    width: 150px;
+  }
 
-    }
+  .modal-content {
+    height: 40vh;
+  }
 
-    .modal-content {
-        height: 40vh;
-    }
-
-    .modal-text {
-        min-height: 0vh;
-        font-size: smaller;
-        padding-left: 7vw;
-        padding-top: 2vh;
-    }
-
+  .modal-text {
+    min-height: 0vh;
+    font-size: smaller;
+    padding-left: 7vw;
+    padding-top: 2vh;
+  }
 }
