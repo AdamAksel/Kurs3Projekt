@@ -3,11 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useState } from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 
 export default function SearchInput({ events }) {
-  const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = (e) => {
@@ -19,10 +17,8 @@ export default function SearchInput({ events }) {
       return;
     }
 
-
     let filteredEvents = [];
     events.forEach((element) => {
-      
       if (element.artist.toLowerCase().includes(searchTerm)) {
         filteredEvents.push({ value: element.artist, id: element.id });
       }
@@ -34,6 +30,10 @@ export default function SearchInput({ events }) {
 
     setSearchResults(filteredEvents);
   };
+
+  function clearSearch() {
+    setSearchResults([]);
+  }
 
   return (
     <div className="Navbar-search-container">
@@ -57,13 +57,14 @@ export default function SearchInput({ events }) {
             const key = `${event.id}-${event.value}`;
 
             return (
-              <Link
+              <NavLink
                 to={`/Event/${event.value}`}
                 key={key}
                 style={{ textDecoration: "none", color: "black" }}
+                onClick={() => clearSearch()}
               >
                 <div className="search-results-links">{event.value}</div>
-              </Link>
+              </NavLink>
             );
           })}
         </div>
