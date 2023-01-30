@@ -89,19 +89,32 @@ flex-direction: column;
   }
   
   .seatBody {
-    margin-left: 200px;
-    max-width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*margin-left: 200px;
+max-width: 300px;*/
   }
   
-  
+  .container {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+
+  }
     h1 {
-      width: 60%;
-      margin: 10px 10px 20px 60px;
+    margin-bottom: 2rem;
+
+      
     }
   
   
   
   .sideLine {
+    width: 30rem;
     border-right: 5px solid #d8d8d8;
     border-left: 5px solid #d8d8d8;
   }

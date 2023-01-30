@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { Navigate } from 'react-router';
+import BuyTickets from '../BuyTickets/BuyTickets';
 import SeatArena from './SeatArena';
 import "./Seats.css";
 
@@ -16,9 +17,11 @@ const Seats = () => {
     return( <>
      
      <div className="seatBody">
-        <div className="seatText">
+     
+        
+     <div className='container'>
           <h1>Select Seats</h1>
-        </div>
+        
         
         <ol className="cabin sideLine">
           <li className="row row--1">
@@ -302,6 +305,8 @@ const Seats = () => {
             </ol>
           </li>
         </ol>
+        </div>
+        <BuyTickets />
       </div>
       
     
