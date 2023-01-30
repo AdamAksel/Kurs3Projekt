@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Navigate } from 'react-router';
 import BuyTickets from '../BuyTickets/BuyTickets';
-import SeatArena from './SeatArena';
+import { useLocation } from 'react-router';
 import "./Seats.css";
 
 
@@ -13,21 +13,25 @@ import "./Seats.css";
 
 
 const Seats = () => {
-   
+
+   let location = useLocation()
+   const [seatArray, setSeatArray] = useState([]) 
+
+   /*setSeatArray([...seatArray, lastclickedcheckbox])*/
+
     return( <>
      
      <div className="seatBody">
-     
         
      <div className='container'>
           <h1>Select Seats</h1>
-        
+        {/*<button onClick={() => console.log(location.state.section)} >Hello</button>*/}
         
         <ol className="cabin sideLine">
           <li className="row row--1">
             <ol className="seats" type="A">
               <li className="seat">
-                <input type="checkbox" id="1A" />
+                <input type="checkbox" onClick={(e) => console.log(e.target.id)} id="1A" />
                 <label for="1A">1A</label>
               </li>
               <li className="seat">
@@ -305,6 +309,9 @@ const Seats = () => {
             </ol>
           </li>
         </ol>
+        </div>
+        <div className='seatsInfo'>
+        {location.state.section}
         </div>
         <BuyTickets />
       </div>

@@ -114,7 +114,7 @@ max-width: 300px;*/
   
   
   .sideLine {
-    width: 30rem;
+    width: 20rem;
     border-right: 5px solid #d8d8d8;
     border-left: 5px solid #d8d8d8;
   }
@@ -141,10 +141,10 @@ max-width: 300px;*/
     .seat:nth-child(3) {
       margin-right: 14.28571428571429%;
     }
-    .seatSubmitButton {
-        border-radius: 10px;
-        background-color: #5C6AFF;
-        margin-left: 200px;
+    .seatsInfo {
+        width: 100px;
+        height: 100px;
+        background-color:aqua;
     }
     input[type=checkbox] {
       position: absolute;
