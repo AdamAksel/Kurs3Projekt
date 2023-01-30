@@ -102,6 +102,9 @@ max-width: 300px;*/
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 800px;
+    height: 60vh;
+    flex-wrap: wrap;
    
 
   }
@@ -127,10 +130,9 @@ max-width: 300px;*/
   
   .seats {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;  
+    flex-wrap: wrap;
   }
+
   
   .seat {
     display: flex;
