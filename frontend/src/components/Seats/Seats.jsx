@@ -302,7 +302,6 @@ const Seats = () => {
             </ol>
           </li>
         </ol>
-        <button className='seatSubmitButton'>CHOOSE</button>
       </div>
       
     

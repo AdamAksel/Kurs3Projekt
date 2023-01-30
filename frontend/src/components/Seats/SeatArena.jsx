@@ -3,13 +3,7 @@ import { Link } from 'react-router-dom';
 import Seats from './Seats';
 
 export default function SeatArena() {
-    const [changeView, setChangeView] = useState(true);
 
-
-  const handleView = () => {
-      changeView = <Seats/> 
-      setChangeView(!changeView)
-    }
   return (
     <div className="seatPage" >
 

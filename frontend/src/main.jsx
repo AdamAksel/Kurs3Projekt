@@ -9,6 +9,11 @@ import Calendar from "./components/Calendar/Calendar";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import Seats from "./components/Seats/Seats";
+import SeatArena from "./components/Seats/SeatArena";
+
+
+
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
