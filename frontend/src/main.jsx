@@ -6,8 +6,6 @@ import Start from "./components/Start/Start";
 import Event from "./components/Event/Event";
 import Login from "./components/Login/Login";
 import Calendar from "./components/Calendar/Calendar";
-import Navbar from "./components/Navbar/Navbar";
-import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -15,8 +13,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
-import SearchInput from "./components/Navbar/SearchInput";
-import { events } from "./components/event-info";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,13 +22,6 @@ const router = createBrowserRouter(
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Event/:id" element={<Event />} />
-      <Route
-          path="/search-results/:id"
-          render={(props) => (
-            <SearchInput events={events} {...props} />
-          )}
-        />
-        
     </Route>
   )
 );

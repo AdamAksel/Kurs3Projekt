@@ -1,7 +1,7 @@
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Navbar.css'
 import { NavLink } from 'react-router-dom'
 
@@ -29,11 +29,19 @@ export default function SearchInput({ events }) {
     })
 
     setSearchResults(filteredEvents)
+
+    setSearchResults(filteredEvents)
   }
 
   function clearSearch() {
     setSearchResults([])
   }
+  useEffect(() => {
+    document.addEventListener('click', clearSearch)
+    return () => {
+      document.removeEventListener('click', clearSearch)
+    }
+  }, [])
 
   return (
     <div className='Navbar-search-container'>
