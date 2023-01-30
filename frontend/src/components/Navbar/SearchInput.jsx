@@ -38,7 +38,6 @@ export default function SearchInput({ events }) {
   return (
     <div className="Navbar-search-container">
       <div className="Navbar-search">
-        <div className="search_button">
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
             className="searchIcon_search"
@@ -48,9 +47,6 @@ export default function SearchInput({ events }) {
             onChange={handleSearch}
             placeholder="Search..."
           />
-          <button className="Navbar-search-button" onClick={handleSearch}>
-            Search
-          </button>
         </div>
         <div className="search-results">
           {searchResults.map((event) => {
@@ -69,6 +65,5 @@ export default function SearchInput({ events }) {
           })}
         </div>
       </div>
-    </div>
   );
 }

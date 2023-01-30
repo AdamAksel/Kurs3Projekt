@@ -1,4 +1,4 @@
-import "./Calendar.css";
+
 
 export default function CalenderCard({ events }) {
   // Map the events to the DOM
@@ -74,8 +74,9 @@ export default function CalenderCard({ events }) {
                 </div>
               );
             })}
+            <span className="arrow">→</span>
           </div>
-          <span className="arrow">→</span>
+          
           <div className="event__image">
             <img className="event__img" src={event.image} alt="event" />
 
