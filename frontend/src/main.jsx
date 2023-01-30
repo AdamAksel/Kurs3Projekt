@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import Start from "./components/Start/Start";
+import Event from "./components/Event/Event";
 import Login from "./components/Login/Login";
 import Calendar from "./components/Calendar/Calendar";
 import Navbar from "./components/Navbar/Navbar";
@@ -15,7 +16,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
-import SeatArena from "./components/Seats/SeatArena";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +25,7 @@ const router = createBrowserRouter(
       <Route path="/Login" element={<Login />} />
       <Route path="/arenaSeats/seats" element={<Seats />} />
       <Route path="/arenaSeats" element={<SeatArena />} />
+      <Route path="/Event/:id" element={<Event />} />
     </Route>
   )
 );
