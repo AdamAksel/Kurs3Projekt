@@ -16,7 +16,7 @@ const Event = () => {
         break
       }
     }
-  }, [events])
+  }, [id])
 
   function getKeyByValue(object, value) {
     return Object.keys(object).find((key) => object[key] === value)
@@ -26,10 +26,62 @@ const Event = () => {
     <>
       <div className='Event-container'>
         <div className='Event-area'>
-          <div className='Event-info'>Event info comming soon</div>
-          <div className='Event-ticket'>Event ticket comming soon</div>
-          <div className='Event-artist'>
-            <h1>{eventInfo.artist}</h1>
+          <div
+            className='Event-image-div'
+            style={{ backgroundImage: `url(${eventInfo.image})` }}
+          ></div>
+          <div className='Event-info'>
+            <h1>{eventInfo.eventName}</h1>
+            <p>{eventInfo.info}</p>
+          </div>
+
+          <div className='Event-ticket-container'>
+            <h1>Standard</h1>
+            <div className='Event-eventbutton-div'>
+              <button
+                disabled={eventInfo.tickets == 0}
+                className='Event-eventbutton'
+                style={
+                  eventInfo.tickets == 0 ? { backgroundColor: 'grey' } : null
+                }
+              >
+                {eventInfo.tickets == 0 ? 'Tickets Unavaliable' : 'Buy Ticket'}
+              </button>
+            </div>
+          </div>
+
+          <div className='Event-artists'>
+            <h1>Participating Artists</h1>
+            <div className='Event-artists1'>
+              <div className='Event-artists-row'>
+                <div
+                  className='Event-artists-img'
+                  style={{ backgroundImage: `url(${eventInfo.image})` }}
+                ></div>
+                <h3>{eventInfo.artist}</h3>
+              </div>
+              <div className='Event-artists-row'>
+                <div
+                  className='Event-artists-img'
+                  style={{ backgroundImage: `url(${eventInfo.image})` }}
+                ></div>
+                <h3>{eventInfo.artist}</h3>
+              </div>
+              <div className='Event-artists-row'>
+                <div
+                  className='Event-artists-img'
+                  style={{ backgroundImage: `url(${eventInfo.image})` }}
+                ></div>
+                <h3>{eventInfo.artist}</h3>
+              </div>
+              <div className='Event-artists-row'>
+                <div
+                  className='Event-artists-img'
+                  style={{ backgroundImage: `url(${eventInfo.image})` }}
+                ></div>
+                <h3>{eventInfo.artist}</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>
