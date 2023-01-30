@@ -71,13 +71,14 @@ flex-direction: column;
 .seat-middle-column-3 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background-color: green;
     height: 100px;
     width: 150px;
     border: 1px solid black;
     font-size: 25px;
 }
+
 .seat-middle-column-3:hover {
     background-color: darkgreen;
 }
@@ -101,12 +102,16 @@ max-width: 300px;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     max-width: 800px;
     height: 60vh;
     flex-wrap: wrap;
    
 
+  }
+
+  .container-wrap {
+    max-width: 250px;
   }
     h1 {
     margin-bottom: 2rem;
@@ -131,6 +136,7 @@ max-width: 300px;*/
   .seats {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
   }
 
   
@@ -140,9 +146,7 @@ max-width: 300px;*/
     padding: 5px;
     position: relative; 
   } 
-    .seat:nth-child(3) {
-      margin-right: 14.28571428571429%;
-    }
+   
     .seatSubmitButton {
         border-radius: 10px;
         background-color: #5C6AFF;
