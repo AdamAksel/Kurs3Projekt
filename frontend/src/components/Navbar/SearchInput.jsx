@@ -34,7 +34,6 @@ export default function SearchInput({ events }) {
   function clearSearch() {
     setSearchResults([]);
   }
-
   return (
     <div className="Navbar-search-container">
       <div className="Navbar-search">
