@@ -6,8 +6,6 @@ import Start from "./components/Start/Start";
 import Event from "./components/Event/Event";
 import Login from "./components/Login/Login";
 import Calendar from "./components/Calendar/Calendar";
-import Navbar from "./components/Navbar/Navbar";
-import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -15,6 +13,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
