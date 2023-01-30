@@ -13,6 +13,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
+import BuyTickets from "./components/BuyTickets/BuyTickets";
 
 
 const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Event/:id" element={<Event />} />
+      <Route path="/BuyTickets" element={<BuyTickets />} />
     </Route>
   )
 );
