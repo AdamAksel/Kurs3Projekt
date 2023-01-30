@@ -21,6 +21,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
+import BuyTickets from "./components/BuyTickets/BuyTickets";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path="/arenaSeats/seats" element={<Seats />} />
       <Route path="/arenaSeats" element={<SeatArena />} />
       <Route path="/Event/:id" element={<Event />} />
+      <Route path="/BuyTickets" element={<BuyTickets />} />
     </Route>
   )
 );
