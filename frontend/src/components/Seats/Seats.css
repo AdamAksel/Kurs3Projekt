@@ -268,3 +268,9 @@ max-width: 300px;*/
   }
 
 
+.ticket-quantity input {
+  
+  height: 27px;
+  width: 300px;
+  font-size: 16px;
+}
