@@ -2,12 +2,7 @@ import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faCircleUser,
-} from "@fortawesome/free-solid-svg-icons";
-import Calendar from "../Calendar/Calendar";
-import { FaCalendarAlt, FaCalendarDay } from "react-icons/fa";
+import { faBars, faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import ImageHeader from "./ImageHeader";
 import IconResponsive from "./IconResponsive";
 
@@ -50,7 +45,7 @@ const Navbar = () => {
           </nav>
         </div>
         <div className="nav_flex_2">
-          <ImageHeader/>
+          <ImageHeader />
         </div>
       </header>
     </>
