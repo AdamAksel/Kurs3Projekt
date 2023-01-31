@@ -144,3 +144,8 @@
   background-size: repeat;
   border-radius: 30px;
 }
+
+.Event-navlink {
+  text-decoration: none;
+  color: inherit;
+}
