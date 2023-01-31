@@ -1,6 +1,42 @@
+#pic{
+  transform: translate(-10%, -50%);
+}
+
+.menuButton:hover{
+background-color: #c1c1c1;
+  animation-name: sideBarMenuButtonAnimation;
+  animation-duration: 0.15s;
+  animation-fill-mode: forwards;
+}
+.menuButton:active{
+  background-color: #b1b1b1;
+  transform: scale(1.02, 1.02);
+}
+@keyframes sideBarMenuButtonAnimation {
+  from {width: 30px;}
+  to {width: 40px;}
+}
+.menuButton{
+  transform: scale(1, 1);
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-bottom-right-radius: 30%;
+  border-top-right-radius: 5%;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.sidebarContainerAlpha{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .Sidebar-Container{
   position: sticky;
-  top: 50px;
   min-height: 92.5vh;
   width: 250px;
   background-color: #202C39;
@@ -11,6 +47,7 @@
   gap: 5px;
   box-shadow: 7px 0 10px -2px #888;
   padding-top: 10px;
+
 }
 .Sidebar-Card{
   background-color: #E8E8E8;

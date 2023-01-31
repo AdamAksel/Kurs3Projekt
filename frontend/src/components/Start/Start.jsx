@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import StartCards from '../Cards/StartCards'
 import { events } from '../event-info'
 import './Start.css'
+
 const Start = () => {
   const [eventInfo, setEventInfo] = useState(events)
 
