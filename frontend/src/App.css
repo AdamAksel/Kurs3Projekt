@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
 
 .main_app {
   width: 100%;
@@ -14,5 +13,3 @@
     margin-top: 8rem;
   }
 }
-
-
