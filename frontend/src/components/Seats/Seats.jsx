@@ -1,33 +1,71 @@
-import React, {useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import { Navigate } from 'react-router';
 import BuyTickets from '../BuyTickets/BuyTickets';
-import SeatArena from './SeatArena';
+import { useLocation } from 'react-router';
 import "./Seats.css";
+import { BsColumns } from 'react-icons/bs';
 
 
 
 /*{
   (screen === 0 ? (<div>todays events</div>) : (<div>recently added</div>))
 }*/
-
-
-
 const Seats = () => {
-   
-    return( <>
-     
-     <div className="seatBody">
-     
-        
-     <div className='container'>
-          <h1>Select Seats</h1>
-        
-        
+
+  let location = useLocation()
+  const [seatArray, setSeatArray] = useState([])
+  const letters=['A','B','C','D','E','F']
+  const rows=[1,2,3,4,5,6,7,8,9,10]
+  const [quantity,setQuantity]=useState(0)
+
+useEffect(()=>{
+console.log(quantity)
+},[quantity])
+  return (
+    <div className="seatBody">
+      <div className="container">
+        <h1>Select Seats</h1>
+        <ol className="sideLine">
+          {rows.map(row => (
+            <li className={`row row--${row}`}>
+              <ol className="seats" type="A">
+                {letters.map(letter => (
+
+                  <li className="seat">
+                    <input type="checkbox" onChange={(e) => setQuantity(e.target.checked?quantity+1:quantity-1)} id={row+letter} />
+                    <label for={row + letter}>{row + letter}</label>
+                  </li>
+                ))}
+              </ol>
+
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div className='seatsInfo'>
+        {location.state.section}
+      </div>
+      <BuyTickets quantity={quantity} />
+    </div>
+  );
+
+
+
+  /*setSeatArray([...seatArray, lastclickedcheckbox])*/
+
+  return (<>
+
+    <div className="seatBody">
+
+      <div className='container'>
+        <h1>Select Seats</h1>
+        {/*<button onClick={() => console.log(location.state.section)} >Hello</button>*/}
+
         <ol className="cabin sideLine">
           <li className="row row--1">
             <ol className="seats" type="A">
               <li className="seat">
-                <input type="checkbox" id="1A" />
+                <input type="checkbox" onClick={(e) => console.log(e.target.id)} id="1A" />
                 <label for="1A">1A</label>
               </li>
               <li className="seat">
@@ -305,14 +343,15 @@ const Seats = () => {
             </ol>
           </li>
         </ol>
-        </div>
-        <BuyTickets />
       </div>
-      
-    
-         
-    
-    </>
+
+
+    </div>
+
+
+
+
+  </>
   )
 }
 
