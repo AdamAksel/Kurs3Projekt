@@ -29,6 +29,8 @@ export default function SearchInput({ events }) {
     });
 
     setSearchResults(filteredEvents);
+
+    setSearchResults(filteredEvents);
   };
 
   function clearSearch() {
@@ -44,20 +46,16 @@ export default function SearchInput({ events }) {
   return (
     <div className="Navbar-search-container">
       <div className="Navbar-search">
-        <div className="search_button">
-          <FontAwesomeIcon
-            icon={faMagnifyingGlass}
-            className="searchIcon_search"
-          />
-          <input
-            className="Navbar-search-input"
-            onChange={handleSearch}
-            placeholder="Search..."
-          />
-          <button className="Navbar-search-button" onClick={handleSearch}>
-            Search
-          </button>
-        </div>
+        <FontAwesomeIcon
+          icon={faMagnifyingGlass}
+          className="searchIcon_search"
+        />
+        <input
+          className="Navbar-search-input"
+          onChange={handleSearch}
+          placeholder="Search..."
+        />
+
         <div className="search-results">
           {searchResults.map((event) => {
             const key = `${event.id}-${event.value}`;
@@ -67,6 +65,7 @@ export default function SearchInput({ events }) {
                 to={`/Event/${event.value}`}
                 key={key}
                 style={{ textDecoration: "none", color: "black" }}
+                onClick={() => clearSearch()}
               >
                 <div className="search-results-links">{event.value}</div>
               </NavLink>

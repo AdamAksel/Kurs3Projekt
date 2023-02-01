@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: flex-start;
   min-width: 100vw;
-  min-width: 100vh;
+  min-height: 100vh;
 }
 
 .Event-area {
@@ -11,9 +11,141 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  min-width: 400px;
   max-width: 1200px;
   flex: 1;
   min-height: fit-content;
-  outline: 1px solid black;
+  border-radius: 30px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 1200px) {
+  .Event-area {
+    min-width: 100%;
+  }
+}
+
+.Event-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 400px;
+  flex: 1;
+  background-size: repeat;
+  border-radius: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Event-image-div {
+    min-height: 300px;
+  }
+}
+
+.Event-info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 4vh;
+  min-width: 100%;
+}
+
+.Event-ticket-container {
+  display: flex;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100px;
+  flex: 1;
+  background-size: repeat;
+  border-radius: 30px;
+  background-color: #d8d8d8;
+}
+
+.Event-eventbutton-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0px;
+  padding-top: 8px;
+  width: 8rem;
+}
+
+.Event-eventbutton {
+  font-size: 10px;
+  font-weight: 600;
+  color: #e8e8e8;
+  background-color: #ef2d56;
+  text-transform: uppercase;
+  padding: 10px 28px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Event-artists {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2vh;
+  padding: 4vh;
+  min-width: 100%;
+}
+.Event-artists1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2vh;
+  padding: 4vh;
+  min-width: 100%;
+}
+
+.Event-artists-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 25%;
+  max-width: 25%;
+  flex: 1;
+  padding: 1vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .Event-artists-row {
+    min-width: 40%;
+    max-width: 40%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Event-artists-row {
+    min-width: 55%;
+    max-width: 55%;
+  }
+}
+
+.Event-artists-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  flex: 1;
+  background-size: repeat;
+  border-radius: 30px;
+}
+
+.Event-navlink {
+  text-decoration: none;
+  color: inherit;
 }

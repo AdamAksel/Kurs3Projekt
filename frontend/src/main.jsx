@@ -6,13 +6,11 @@ import Start from "./components/Start/Start";
 import Event from "./components/Event/Event";
 import Login from "./components/Login/Login";
 import Calendar from "./components/Calendar/Calendar";
+import Modal from './components/Modal/Modal';
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar.jsx";
 import Seats from "./components/Seats/Seats";
 import SeatArena from "./components/Seats/SeatArena";
-
-
-
 
 import {
   createBrowserRouter,
@@ -21,23 +19,25 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
+import SignUp from './components/Signup/SignUp'
 import BuyTickets from "./components/BuyTickets/BuyTickets";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path='/' element={<App />}>
       <Route index element={<Start />} />
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/Event/:id" element={<Event />} />
+      <Route path='/Artist/:id' element={<Modal />} />
+      <Route path='/Signup' element={<SignUp />} />
       <Route path="/arenaSeats/seats" element={<Seats />} />
       <Route path="/arenaSeats" element={<SeatArena />} />
-      <Route path="/Event/:id" element={<Event />} />
-      <Route path="/BuyTickets" element={<BuyTickets />} />
     </Route>
   )
-);
-ReactDOM.createRoot(document.getElementById("root")).render(
+)
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>
-);
+)
