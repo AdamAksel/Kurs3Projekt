@@ -29,7 +29,7 @@ const Event = () => {
           <div
             className='Event-image-div'
             style={{ backgroundImage: `url(${eventInfo.image})` }}
-          ></div>
+          />
           <div className='Event-info'>
             <h1>{eventInfo.eventName}</h1>
             <p>{eventInfo.info}</p>
@@ -71,6 +71,7 @@ const Event = () => {
       </div>
     </>
   )
+
 }
 
 export default Event

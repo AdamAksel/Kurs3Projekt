@@ -1,0 +1,75 @@
+.cards-container {
+    width: 300px;
+    height: fit-content;
+    overflow-x: hidden;
+    border-radius: 5px;
+    box-shadow: 4px -4px 5px 0px rgb(111, 108, 108);
+    cursor: pointer;
+}
+
+.cards-container img {
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+    opacity: 0.8;
+    outline: none;
+}
+
+.cards-container p {
+    outline: none;
+    margin: 0;
+    z-index: 10;
+}
+
+.cards-name-text {
+    color: rgba(254, 255, 255, 1);
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 1;
+    background: linear-gradient(to bottom left, black, white);
+    border-radius: 4px;
+    text-align: center;
+    outline: none;
+}
+
+
+.date {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+
+.start-page .card .event-button {
+    font-size: 10px;
+    font-weight: 600;
+    color: #e8e8e8;
+    background-color: #ef2d56;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    height: 50%;
+    margin-top: 12px;
+}
+
+.start-page .card .content {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.start-page .card {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    margin: 20px;
+}
