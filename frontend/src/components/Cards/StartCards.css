@@ -21,16 +21,24 @@
   z-index: 10;
 }
 
+.cards-hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
 .cards-name-text {
   color: rgba(254, 255, 255, 1);
   font-family: 'Merriweather', serif;
-  font-size: 30px;
+  font-size: auto;
   font-weight: bold;
   opacity: 1;
   outline: none;
 }
 
 .cards-name {
+  min-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +90,16 @@
   justify-content: space-around;
 }
 
+.start-cards-text-wrapper {
+  max-width: 50%;
+  overflow: hidden;
+}
+
 .start-cards-navlink {
   text-decoration: none;
   color: inherit;
+}
+
+.location {
+  font-size: auto;
 }
