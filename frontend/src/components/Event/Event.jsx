@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import './Event.css'
 import { useParams, NavLink } from 'react-router-dom'
-import { events } from '../event-info'
+import GlobalContext from '../../GlobalContext'
 
 const Event = () => {
-  const [eventInfo, setEventInfo] = useState(0)
+  const [event, setEvent] = useState(0)
+  const { concerts } = useContext(GlobalContext)
   let { id } = useParams()
 
   useEffect(() => {
-    for (let i = 0; i < events.length; i++) {
-      let foundEvent = getKeyByValue(events[i], id)
-
+    for (let i = 0; i < concerts.length; i++) {
+      let foundEvent = getKeyByValue(concerts[i], id)
       if (foundEvent) {
-        setEventInfo({ ...events[i] })
+        setEvent({ ...concerts[i] })
         break
       }
     }
@@ -28,24 +28,25 @@ const Event = () => {
         <div className='Event-area'>
           <div
             className='Event-image-div'
-            style={{ backgroundImage: `url(${eventInfo.image})` }}
+            style={{ backgroundImage: `url(${event.image})` }}
           ></div>
           <div className='Event-info'>
-            <h1>{eventInfo.eventName}</h1>
-            <p>{eventInfo.info}</p>
+            <h1>{event.name}</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae id
+              cos ipsum dicta numquam.
+            </p>
           </div>
 
           <div className='Event-ticket-container'>
             <h1>Standard</h1>
             <div className='Event-eventbutton-div'>
               <button
-                disabled={eventInfo.tickets == 0}
+                disabled={event.tickets == 0}
                 className='Event-eventbutton'
-                style={
-                  eventInfo.tickets == 0 ? { backgroundColor: 'grey' } : null
-                }
+                style={event.tickets == 0 ? { backgroundColor: 'grey' } : null}
               >
-                {eventInfo.tickets == 0 ? 'Tickets Unavaliable' : 'Buy Ticket'}
+                {event.tickets == 0 ? 'Tickets Unavaliable' : 'Buy Ticket'}
               </button>
             </div>
           </div>
@@ -56,13 +57,10 @@ const Event = () => {
               <div className='Event-artists-row'>
                 <div
                   className='Event-artists-img'
-                  style={{ backgroundImage: `url(${eventInfo.image})` }}
+                  style={{ backgroundImage: `url(${event.image})` }}
                 ></div>
-                <NavLink
-                  to={`/Artist/${eventInfo.artist}`}
-                  className='Event-navlink'
-                >
-                  <h3>{eventInfo.artist}</h3>
+                <NavLink to={`/Artist/${event.name}`} className='Event-navlink'>
+                  <h3>{event.name}</h3>
                 </NavLink>
               </div>
             </div>
