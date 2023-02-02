@@ -1,17 +1,18 @@
 
-import React, { useState } from 'react'
+import React, {useContext, useState} from 'react'
 import StartCards from '../Cards/StartCards'
 import { events } from '../event-info'
 import './Start.css'
+import GlobalContext from "../../GlobalContext.jsx";
 const Start = () => {
-  const [eventInfo, setEventInfo] = useState(events)
+  const {concerts} = useContext(GlobalContext)
 
   return (
     <>
 
       <section className=''>
         <div className='startPage'>
-          {eventInfo
+          {concerts
             .filter((event, index) => index < 6)
             .map((event, index) => (
               <div className='sect-cards' key={event.date}>
