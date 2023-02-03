@@ -3,9 +3,11 @@
 .main_app {
   width: 100%;
   height: 100%;
-  margin-top: 21rem;
-  padding: 4rem 0;
+  padding-top: 80px;
   background-color: #ffffff;
+  display: grid;
+  grid-template-columns:repeat(5, 1fr);
+  grid-template-areas: "sidebar sidebar";
 }
 
 @media (max-width: 768px) {

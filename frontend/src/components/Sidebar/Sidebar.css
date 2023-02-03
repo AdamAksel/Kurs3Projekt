@@ -1,7 +1,7 @@
 .Sidebar-Container{
   position: sticky;
   top: 50px;
-  min-height: 92.5vh;
+  min-height: 91.5vh;
   width: 250px;
   background-color: #202C39;
   color: #FFFFFF;
@@ -11,6 +11,7 @@
   gap: 5px;
   box-shadow: 7px 0 10px -2px #888;
   padding-top: 10px;
+  grid-area: sidebar;
 }
 .Sidebar-Card{
   background-color: #E8E8E8;
