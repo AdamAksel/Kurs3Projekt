@@ -25,6 +25,7 @@ console.log(quantity)
     <div className="seatBody">
       <div className="container">
         <h1>Select Seats</h1>
+        <h2>{location.state.section}</h2>
         <ol className="sideLine">
           {rows.map(row => (
             <li className={`row row--${row}`}>
@@ -42,9 +43,7 @@ console.log(quantity)
           ))}
         </ol>
       </div>
-      <div className='seatsInfo'>
-        {location.state.section}
-      </div>
+      
       <BuyTickets quantity={quantity} />
     </div>
   );
