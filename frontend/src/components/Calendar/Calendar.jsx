@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import GlobalContext from '../../GlobalContext.jsx'
 import "./Calendar.css";
-import { useState } from "react";
 import {
   faCalendarDays,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import CalenderCard from "./CalenderCard";
-import {events} from "../event-info";
 const Calendar = () => {
- 
 
+  const { concerts } = useContext(GlobalContext)
 
   const [isOpened, setIsOpened] = useState(false);
 
@@ -20,7 +19,13 @@ const Calendar = () => {
   return (
     <div className="container_calendar">
       <div className="calendar">
-        <CalenderCard events={events} />
+        {concerts
+            .filter((event, index) => index < 6)
+            .map((event) => (
+                <div className='sect-cards' key={event.date}>
+                  <CalenderCard event={event} />
+                </div>
+            ))}
       </div>
     </div>
   );
