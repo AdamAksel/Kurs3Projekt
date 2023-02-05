@@ -1,25 +1,19 @@
-import React, { useContext, useState } from 'react'
-import StartCards from '../Cards/StartCards'
-import './Start.css'
-import GlobalContext from '../../GlobalContext.jsx'
-const Start = () => {
-  const { concerts } = useContext(GlobalContext)
+import React, { useContext, useState } from "react";
+import "./Start.css";
+import GlobalContext from "../../GlobalContext.jsx";
+import StartCard from "../Cards/StartCard.jsx";
 
-  return (
-    <>
-      <section className=''>
-        <div className='startPage'>
-          {concerts
-            .filter((event, index) => index < 6)
-            .map((event) => (
-              <div className='sect-cards' key={event.date}>
-                <StartCards event={event} />
-              </div>
-            ))}
-        </div>
-      </section>
-    </>
-  )
+export default function () {
+  const { concerts } = useContext(GlobalContext);
+  const concertInfo = concerts.slice(0, 6);
+
+    return <section className="startPage">
+      <StartCards />
+    </section>
+
+    function StartCards() {
+      return concertInfo.map((event) => (
+        <StartCard event={event} key={event.id} />
+    ));
+  }
 }
-
-export default Start

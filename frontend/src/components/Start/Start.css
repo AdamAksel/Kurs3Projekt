@@ -7,6 +7,8 @@
     max-width: 800px;
     margin: auto;
 }
-.sect-cards {
+.section-cards {
     margin: 20px;
+    width: 300px;
+    box-shadow: 4px -4px 5px 0px rgb(111 108 108);
 }
