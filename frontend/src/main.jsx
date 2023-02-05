@@ -23,7 +23,7 @@ const router = createBrowserRouter(
       <Route path='/Calendar' element={<Calendar />} />
       <Route path='/Login' element={<Login />} />
 
-      <Route path='/Event/:id' element={<Event />} />
+      <Route path='/event/:id' element={<Event />} />
       <Route path='/Artist/:id' element={<Modal />} />
       <Route path='/Signup' element={<SignUp />} />
     </Route>

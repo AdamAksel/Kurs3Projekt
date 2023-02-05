@@ -1,11 +1,9 @@
 import './StartCards.css'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const StartCards = ({ event }) => {
-  return (
-    <>
-      <NavLink to={`/Event/${event.name}`} className='start-cards-navlink'>
-        <section className='cards-container'>
+  return <Link to={`/event/${event.name}`} className='start-cards-navlink cards-container'>
+        
           <div style={{ position: 'relative', outline: 'none' }}>
             <div className='cards-hero' style={{ outline: 'none' }}>
               <img src={event.image} alt='chris-brown image' />
@@ -32,10 +30,8 @@ const StartCards = ({ event }) => {
               </div>
             </div>
           </div>
-        </section>
-      </NavLink>
-    </>
-  )
+
+      </Link>
 }
 
 export default StartCards
