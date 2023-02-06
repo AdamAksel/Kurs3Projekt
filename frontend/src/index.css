@@ -13,12 +13,12 @@ html {
 
 #root {
   height: 100%;
-  width: 100%;
+  width: 98%;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.9;
   font-size: 1.6rem;
-  overflow-x: hidden;
+ 
 }

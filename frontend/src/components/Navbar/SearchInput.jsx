@@ -1,11 +1,13 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink  } from "react-router-dom";
+import GlobalContext from '../../GlobalContext.jsx'
 
-export default function SearchInput({ events }) {
+export default function SearchInput() {
+  const { concerts } = useContext(GlobalContext)
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = (e) => {
@@ -18,17 +20,19 @@ export default function SearchInput({ events }) {
     }
 
     let filteredEvents = [];
-    events.forEach((element) => {
-      if (element.artist.toLowerCase().includes(searchTerm)) {
-        filteredEvents.push({ value: element.artist, id: element.id });
+    concerts.forEach((element) => {
+      if (element.name.toLowerCase().includes(searchTerm)) {
+        filteredEvents.push({ value: element.name, id: element.id });
       }
 
+      /*
       if (element.eventName.toLowerCase().includes(searchTerm)) {
         filteredEvents.push({ value: element.eventName, id: element.id });
       }
+      */
     });
 
-    setSearchResults(filteredEvents);
+    
 
     setSearchResults(filteredEvents);
   };

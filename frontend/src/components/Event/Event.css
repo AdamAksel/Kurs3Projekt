@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
 }
 
@@ -15,7 +15,7 @@
   flex: 1;
   min-height: fit-content;
   border-radius: 30px;
-  overflow: hidden;
+  
 }
 @media only screen and (max-width: 1200px) {
   .Event-area {

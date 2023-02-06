@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import ImageHeader from "./ImageHeader";
 import IconResponsive from "./IconResponsive";
+import SearchInput from "./SearchInput"
+
 
 const Navbar = () => {
   return (
@@ -18,6 +20,7 @@ const Navbar = () => {
               className="navbar__nav__logo__icon"
             />
           </NavLink>
+          <SearchInput  />
           <nav className="navbar__nav">
             <ul className="navbar__nav__list">
               <li>
@@ -44,9 +47,7 @@ const Navbar = () => {
             </div>
           </nav>
         </div>
-        <div className="nav_flex_2">
-          <ImageHeader />
-        </div>
+      
       </header>
     </>
   );
