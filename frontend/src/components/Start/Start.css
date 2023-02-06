@@ -3,10 +3,14 @@
   justify-content: space-around;
 
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 800px;
+  min-width: 800px;
   margin: auto;
 }
 .sect-cards {
   margin: 20px;
+}
+@media only screen and (max-width: 764px) {
+  .startPage {
+    min-width: 400px;
+  }
 }

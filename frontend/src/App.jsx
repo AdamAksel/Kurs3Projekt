@@ -12,7 +12,9 @@ function App() {
             </header>
             <main className="main_app">
                 <Sidebar/>
+                <div className="outlet_app">
                 <Outlet/>
+                </div>
             </main>
         </GlobalProvider>
     )

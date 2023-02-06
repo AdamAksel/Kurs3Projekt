@@ -15,3 +15,9 @@
     margin-top: 8rem;
   }
 }
+
+.outlet_app {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
