@@ -5,6 +5,8 @@
   overflow-x: hidden;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 4px -4px 5px 0px rgb(111 108 108);
+  margin: 20px;
 }
 
 .cards-container img {

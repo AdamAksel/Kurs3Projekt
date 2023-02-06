@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCircleUser } from "@fortawesome/free-solid-svg-icons";
@@ -11,24 +11,24 @@ const Navbar = () => {
     <>
       <header className="header">
         <div className="nav_flex_1">
-          <NavLink to="/">
+          <Link to="/">
             <img
               src="./logo.svg"
               alt="vegas"
               className="navbar__nav__logo__icon"
             />
-          </NavLink>
+          </Link>
           <nav className="navbar__nav">
             <ul className="navbar__nav__list">
               <li>
-                <NavLink to="/">Home</NavLink>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <NavLink to="/Calendar">Calendar</NavLink>
+                <Link to="/Calendar">Calendar</Link>
               </li>
 
               <li className="login_hover">
-                <NavLink to="/Login">
+                <Link to="/Login">
                   <div className="login">
                     <FontAwesomeIcon
                       icon={faCircleUser}
@@ -36,7 +36,7 @@ const Navbar = () => {
                     />
                     <FontAwesomeIcon icon={faBars} className="icon iconBars" />
                   </div>
-                </NavLink>
+                </Link>
               </li>
             </ul>
             <div className="responsive">
