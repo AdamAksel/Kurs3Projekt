@@ -42,10 +42,7 @@ async function featuredConcerts(){
 }
 
 useEffect(() => {
-
-    featuredConcerts()
-  
-
+  featuredConcerts()
 }, [])
 
 
@@ -60,7 +57,7 @@ useEffect(() => {
       </div>
         <div className='startPage'>
        
-          {featuredEvents
+          {featuredEvents.length == 0 ? null : featuredEvents
             .map((event) => (
               <div className='sect-cards' key={ Math.random() * 1000000}>
                 <StartCards event={event} />
