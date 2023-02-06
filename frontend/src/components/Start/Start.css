@@ -1,12 +1,12 @@
 .startPage {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
+  display: flex;
+  justify-content: space-around;
+
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
 }
 .sect-cards {
-    margin: 20px;
+  margin: 20px;
 }
