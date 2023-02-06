@@ -14,7 +14,6 @@ export default function CalenderCard({ event }) {
           <div className='event__date__time'>{`${event.hour}:${event.minute}`}</div>
         </div>
         );
-        <span className='arrow'>→</span>
       </div>
 
       <div className='event__image'>
@@ -22,12 +21,14 @@ export default function CalenderCard({ event }) {
       </div>
       <div className='event__info'>
         <p className='event__description'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+          To ne cede malis, sed contra audentior ito, To ne cede malis, sed
+          contra audentior ito, To ne cede malis, sed contra audentior ito{' '}
+          {event.id}
         </p>
         <div className='event__location'>
-          <p>{event.venue}</p>
-          <span>|</span>
-          <p>place</p>
+          <p>
+            <b>{event.venue} |</b> Venue
+          </p>
         </div>
       </div>
       <div className='event__payment__button'>

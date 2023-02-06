@@ -14,9 +14,16 @@ const Calendar = () => {
 
   useEffect(() => {
     let tempSort = concerts.sort(function (a, b) {
-      return a.datum > b.datum ? 1 : -1
+      if (a.datum !== b.datum) {
+        return a.datum > b.datum ? 1 : -1
+      }
+      if (a.hour !== b.hour) {
+        return a.hour > b.hour ? 1 : -1
+      }
+      if (a.minute !== b.minute) {
+        return a.minute > b.minute ? 1 : -1
+      }
     })
-    console.log(tempSort)
     let tempFilter = tempSort.filter((event, index) => eventMapIndex(index))
     setTenConcerts(...[tempFilter])
   }, [history])
@@ -40,7 +47,10 @@ const Calendar = () => {
       </div>
       <div className='calendar'>
         {tenConcerts.map((event) => (
-          <CalenderCard key={event.id + Math.random() * 1000} event={event} />
+          <CalenderCard
+            key={event.id + Math.random() * 10000000}
+            event={event}
+          />
         ))}
       </div>
     </div>
