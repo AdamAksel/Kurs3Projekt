@@ -5,12 +5,9 @@ import GlobalContext from '../../GlobalContext'
 
 const Sidebar = () => {
   const { recentlyAddedEvents, todaysEvents } = useContext(GlobalContext)
-
   const [viewChange, setViewChange] = useState(0)
 
-  return (
-    <>
-      <div className='Sidebar-Container'>
+  return <dgiiv className='Sidebar-Container'>
         <div className='Sidebar-Texts'>
           <div
             style={viewChange === 0 ? { backgroundColor: '#374a64' } : null}
@@ -19,8 +16,8 @@ const Sidebar = () => {
             }}
             className='Sidebar-TodaysEvents-Text'
           >
-            {' '}
-            Today's Events{' '}
+
+            Today's Events
           </div>
           <div
             style={viewChange === 1 ? { backgroundColor: '#374a64' } : null}
@@ -29,8 +26,8 @@ const Sidebar = () => {
             }}
             className='Sidebar-RecentlyAdded-Text'
           >
-            {' '}
-            Recently Added{' '}
+
+            Recently Added
           </div>
         </div>
         {viewChange === 0 ? (
@@ -50,7 +47,7 @@ const Sidebar = () => {
           <div className='Sidebar-RecentlyAdded'>
             <div className='Sidebar-RecentlyAdded-Cards'>
               {recentlyAddedEvents
-                .filter((event, index) => index < 2)
+                .filter((event, index) => index < 1)
                 .map((event) => (
                   <div
                     key={Math.random() * 1000000}
@@ -62,9 +59,8 @@ const Sidebar = () => {
             </div>
           </div>
         )}
-      </div>
-    </>
-  )
+      </dgiiv>
+    
 }
 
 export default Sidebar
