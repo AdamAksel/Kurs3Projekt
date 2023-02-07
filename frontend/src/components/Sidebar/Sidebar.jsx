@@ -7,7 +7,7 @@ const Sidebar = () => {
   const { recentlyAddedEvents, todaysEvents } = useContext(GlobalContext)
   const [viewChange, setViewChange] = useState(0)
 
-  return <dgiiv className='Sidebar-Container'>
+  return <div className='Sidebar-Container'>
         <div className='Sidebar-Texts'>
           <div
             style={viewChange === 0 ? { backgroundColor: '#374a64' } : null}
@@ -59,7 +59,7 @@ const Sidebar = () => {
             </div>
           </div>
         )}
-      </dgiiv>
+      </div>
     
 }
 
