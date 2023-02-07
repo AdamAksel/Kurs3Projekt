@@ -4,6 +4,7 @@ import BuyTickets from '../BuyTickets/BuyTickets';
 import { useLocation } from 'react-router';
 import "./Seats.css";
 import { BsColumns } from 'react-icons/bs';
+import BuyTicketsStand from '../BuyTickets/BuyTickets';
 
 
 const Seats = () => {
@@ -19,7 +20,7 @@ console.log(quantity)
 },[quantity])
   return (
     <div className="seatBody">
-      <div className="container">
+      <div className="seatsContainer">
         <h1>Select Seats</h1>
         <h2>{location.state.section}</h2>
         <ol className="sideLine">
@@ -39,8 +40,9 @@ console.log(quantity)
           ))}
         </ol>
       </div>
-      
-      <BuyTickets quantity={quantity} />
+      <div className='seatPayment'>
+      <BuyTicketsStand quantity={quantity} />
+      </div>
     </div>
   );
 }
