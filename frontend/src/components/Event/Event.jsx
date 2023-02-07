@@ -27,6 +27,7 @@ const Event = () => {
       <div className='Event-container'>
         <div className='Event-area'>
           <div
+            onClick={() => console.log(event)}
             className='Event-image-div'
             style={{ backgroundImage: `url(${event.image})` }}
           ></div>
@@ -42,11 +43,11 @@ const Event = () => {
             <h1>Standard</h1>
             <div className='Event-eventbutton-div'>
               <button
-                disabled={event.tickets == 0}
+                disabled={event.ticket == 0}
                 className='Event-eventbutton'
-                style={event.tickets == 0 ? { backgroundColor: 'grey' } : null}
+                style={event.ticket == 0 ? { backgroundColor: 'grey' } : null}
               >
-                {event.tickets == 0 ? 'Tickets Unavaliable' : 'Buy Ticket'}
+                {event.ticket == 0 ? 'Tickets Unavaliable' : 'Buy Ticket'}
               </button>
             </div>
           </div>

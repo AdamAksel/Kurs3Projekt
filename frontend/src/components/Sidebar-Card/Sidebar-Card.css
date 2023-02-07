@@ -1,15 +1,16 @@
-.Sidebar-Card{
-    background-color: #E8E8E8;
-    color: #202C39;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #EF2D56;
+.Sidebar-Card {
+  background-color: #e8e8e8;
+  color: #202c39;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ef2d56;
 }
-.Sidebar-Card:hover{
-    cursor: pointer;
+.Sidebar-Card:hover {
+  cursor: pointer;
 }
-.Sidebar-Card-Img{
-    width: 200px;
+.Sidebar-Card-Img {
+  min-height: 200px;
+  min-width: 200px;
 }

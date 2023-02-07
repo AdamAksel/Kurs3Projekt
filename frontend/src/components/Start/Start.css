@@ -1,60 +1,57 @@
 .startPage {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    
-    min-width: 20vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+  min-width: 20vw;
 }
 .sect-cards {
-    margin: 20px;
+  margin: 20px;
 }
 
-.start-flex{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.start-flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 
-    height: fit-content;
-    background-color: #ffffff;
+  height: fit-content;
+  background-color: #ffffff;
 }
 
 @media only screen and (max-width: 768px) {
-    .start-flex{
-      flex-direction: column;
-    }
-
+  .start-flex {
+    flex-direction: column;
+  }
 }
 
-.start-buttons-container{
-
-    margin-top: 28px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    min-width: 100%;
-    min-height: 20px;   
+.start-buttons-container {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 100%;
+  min-height: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-    .start-buttons-container{
-     display: none;
-    }
-
+  .start-buttons-container {
+    display: none;
+  }
 }
 
-.start-button{
-    min-width: 100px;
-    background-color: #202C39;
-    color: white;
-    font-size: small;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-   
-    padding: 0.5rem;
-    border-bottom: 2px solid #202C39;
-    border-radius: 25px;
+.start-button {
+  min-width: 100px;
+  background-color: #202c39;
+  color: white;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  padding: 0.5rem;
+  border-bottom: 2px solid #202c39;
+  border-radius: 25px;
 }
