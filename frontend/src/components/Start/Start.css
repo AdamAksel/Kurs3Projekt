@@ -11,15 +11,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   height: fit-content;
   background-color: #ffffff;
-}
-
-@media only screen and (max-width: 768px) {
-  .start-flex {
-    flex-direction: column;
-  }
 }
 
 .start-buttons-container {
@@ -30,13 +23,6 @@
   min-width: 100%;
   min-height: 20px;
 }
-
-@media only screen and (min-width: 768px) {
-  .start-buttons-container {
-    display: none;
-  }
-}
-
 .start-button {
   min-width: 100px;
   background-color: #202c39;
@@ -46,8 +32,18 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
   padding: 0.5rem;
   border-bottom: 2px solid #202c39;
   border-radius: 25px;
+}
+@media only screen and (min-width: 768px) {
+  .start-buttons-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .start-flex {
+    flex-direction: column;
+  }
 }
