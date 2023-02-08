@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import ImageHeader from "./ImageHeader";
 import IconResponsive from "./IconResponsive";
+import { AuthContext } from "../context/authContext";
 
 const Navbar = () => {
+  const { currentUser, logout } = useContext(AuthContext);
+
+  const handleLogout = async () => {
+    await logout();
+    localStorage.removeItem("token");
+    window.location.reload();
+  };
   return (
     <>
       <header className="header">
@@ -26,18 +34,27 @@ const Navbar = () => {
               <li>
                 <NavLink to="/Calendar">Calendar</NavLink>
               </li>
-
-              <li className="login_hover">
-                <NavLink to="/Login">
-                  <div className="login">
-                    <FontAwesomeIcon
-                      icon={faCircleUser}
-                      className="icon iconUser"
-                    />
-                    <FontAwesomeIcon icon={faBars} className="icon iconBars" />
-                  </div>
-                </NavLink>
-              </li>
+              {currentUser ? (
+                <li className="username">
+                  <h4>{currentUser ? currentUser.email.split("@", 1): currentUser}</h4>
+                  <div onClick={handleLogout}>logout</div>
+                </li>
+              ) : (
+                <li className="login_hover">
+                  <NavLink to="/Login">
+                    <div className="login">
+                      <FontAwesomeIcon
+                        icon={faCircleUser}
+                        className="icon iconUser"
+                      />
+                      <FontAwesomeIcon
+                        icon={faBars}
+                        className="icon iconBars"
+                      />
+                    </div>
+                  </NavLink>
+                </li>
+              )}
             </ul>
             <div className="responsive">
               <IconResponsive />
