@@ -15,7 +15,6 @@
   flex: 1;
   min-height: fit-content;
   border-radius: 30px;
-  
 }
 @media only screen and (max-width: 1200px) {
   .Event-area {
@@ -27,10 +26,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
-  min-height: 400px;
+  min-width: 50%;
+  max-height: 400px;
   flex: 1;
-  background-size: repeat;
   border-radius: 30px;
 }
 
