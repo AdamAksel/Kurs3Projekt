@@ -1,10 +1,12 @@
 import './Sidebar-Card.css'
 import altImg from './ATLienz.jpg'
+import {NavLink} from "react-router-dom";
 
 const SidebarCard = ({event}) => {
 
     return (
         <>
+            <NavLink to={`/Event/${event.name}`} className='sidebar-card-navlink'>
             <div className="sidebar-card">
                 <img className="sidebar-card-img"
                      src={event.image}
@@ -16,6 +18,7 @@ const SidebarCard = ({event}) => {
                 <div className="sidebar-card-info"> {event.added ? "Added Today!" : event.datum} </div>
                 <div className="sidebar-card-info"><b>{event.venue}</b></div>
             </div>
+            </NavLink>
         </>
     )
 }
