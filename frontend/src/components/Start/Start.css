@@ -4,6 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  min-width: 20vw;
 }
 
 .start-flex {
@@ -14,7 +15,7 @@
   background-color: #ffffff;
 }
 
-.start-buttons-container {
+.startButtons {
   margin-top: 28px;
   display: flex;
   justify-content: space-evenly;
@@ -36,7 +37,7 @@
   border-radius: 25px;
 }
 @media only screen and (min-width: 768px) {
-  .start-buttons-container {
+  .startButtons {
     display: none;
   }
 }

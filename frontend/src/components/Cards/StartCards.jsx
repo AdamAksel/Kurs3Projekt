@@ -2,7 +2,7 @@ import './StartCards.css'
 import { Link } from 'react-router-dom'
 
 export default function ({ event })  {
-  return <Link to={`/Event/${event.name}`} className='start-cards-navlink cards-container'>
+  return <Link to={`/Event/${event.name}`} className='startCards'>
         <StartCardImage/>
         <StartCardContent/>
 </Link>

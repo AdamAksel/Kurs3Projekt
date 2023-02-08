@@ -24,16 +24,13 @@ export default function SearchInput() {
       if (element.name.toLowerCase().includes(searchTerm)) {
         filteredEvents.push({ value: element.name, id: element.id });
       }
-
-      /*
-      if (element.eventName.toLowerCase().includes(searchTerm)) {
-        filteredEvents.push({ value: element.eventName, id: element.id });
-      }
-      */
+      
+      // if (element.venue.toLowerCase().includes(searchTerm)) {
+      //   filteredEvents.push({ value: element.venue, id: element.id });
+      // }
+      
     });
-
     
-
     setSearchResults(filteredEvents);
   };
 

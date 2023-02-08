@@ -1,8 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react'
-import StartCards from '../Cards/StartCards'
+import React, { useContext, useState, } from 'react'
 import './Start.css'
 import GlobalContext from '../../GlobalContext.jsx'
 import Sidebar from '../Sidebar/Sidebar'
+import StartPageEvents from './StartPageEvents'
+import EventButtons from './EventButtons'
 
 export default function () {
   const { featuredEvents, 
@@ -13,44 +14,8 @@ export default function () {
 
   return <section className='start-flex'>
       <Sidebar />
-      <EventButtons/>
-      <StartPageEvents/>
+      <EventButtons todaysEvents ={todaysEvents} recentlyAddedEvents={recentlyAddedEvents} featuredEvents={featuredEvents} setStartEvents={setStartEvents} />
+      <StartPageEvents startEvents={startEvents} featuredEvents={featuredEvents} />
   </section>
-
-  function EventButtons() {
-    return <div className='start-buttons-container'>
-    <div
-      onClick={() => setStartEvents([...todaysEvents])}
-      className='start-button'
-    >
-      Todays Events
-    </div>
-    <div
-      onClick={() => setStartEvents([...featuredEvents])}
-      className='start-button'
-    >
-      Featured
-    </div>
-    <div
-      onClick={() => setStartEvents([...recentlyAddedEvents])}
-      className='start-button'
-    >
-      Latest Added
-    </div>
-  </div>
-  }
-
-  function StartPageEvents() {
-    return <div className='startPage'>
-    {startEvents.length == 0
-      ? featuredEvents.map((event) => (
-            <StartCards event={event} key={Math.random() * 1000000}/>       
-        ))
-      : startEvents.map((event) => (
-            <StartCards event={event}  key={Math.random() * 1000000}/>
-        ))}
-  </div>  
-  }
-   
 }
 
