@@ -4,9 +4,6 @@
     align-items: center;
     flex-direction: column;
 }
-
-
-  
   .image {
     width: 100%;
     height: auto;
@@ -66,7 +63,6 @@
 
     .container {
         display:flex;
-        /* position: relative; */
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -75,18 +71,13 @@
         background-size: cover;
         height: 40rem;
         width: 80rem;
-        /* padding: 0 20rem; */
-      
-
        }
         .buy-tickets-page {
-            position: absolute;
           width:100%;
            display: flex;
            justify-content: center;
            align-items: center;
            flex-direction: column;
-          ;
         }
 
     @media only screen and (max-width: 768px) {
@@ -97,7 +88,6 @@
         }
        .container {
         display:flex;
-        /* position: relative; */
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -108,8 +98,6 @@
         width: 100%;
        }
         .buy-tickets-page {
-            position: absolute;
-           
           width:100%;
            display: flex;
            justify-content: center;
@@ -119,7 +107,7 @@
            padding: 0;
         }
 
-        buy-tickets-page label{
+        .buy-tickets-page label{
             width: 100%;
 
         }

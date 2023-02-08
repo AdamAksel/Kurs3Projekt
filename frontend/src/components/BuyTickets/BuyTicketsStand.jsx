@@ -30,7 +30,6 @@ export default function BuyTickets() {
 <div className="ticketsPage"> 
       <h1>Buy Tickets</h1>
  <div class="container">
-{/* <img src={image} alt="bild på scen" className="image"/> */}
 
 <div className="buy-tickets-page">
       

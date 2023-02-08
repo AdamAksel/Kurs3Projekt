@@ -2,12 +2,8 @@
 display: flex;
 justify-content: center;
 align-items: center;
-height: 100vh;
+height: 70vh;
 width: 100vw; 
-
-
-  
-   
 }
 
 .seat-container {
@@ -15,15 +11,12 @@ width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-    width: 50%;
+    width: 30%;
     height: 70%;
     margin: 0 auto;
     background-color: #F42536;
     border-radius: 50%;
     overflow: hidden;
-
-  
-   
 }
 
 .seat-links{
@@ -32,28 +25,16 @@ width: 100vw;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* justify-content: center; */
-  /* align-content: center; */
-  /* justify-items: center; */
   list-style: none;
 }
-
-/* .seat-container a {
-   position: absolute;
-  width: 100%;
-  height: 100%;
-}  */
  .seat-column-1 {
   height: 100%;
   width: 100%;
-
-  /* position: absolute; */
  display: flex;
  justify-content: center;
  align-items: center;
- background-color: cyan;
+ background-color: #283845;
  font-size:xx-large;
- /* width:fit-content; */
  border-right: 1px solid black;
 
 } 
@@ -61,14 +42,14 @@ width: 100vw;
     text-decoration: none;
 }
 .seat-column-1:hover {
-background-color: darkblue;
+background-color: #202C39;
 }
 .seatLink {
   text-decoration: none;
   color: inherit;
 }
 .seat-column-2 {
-background-color:red;
+background-color:#5c5c5c;
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -77,19 +58,17 @@ width: 100%;
 flex-direction: column;
 } 
  .seat-column-3 {
+   width: 100%;
+   height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cyan;
-    width: 100%;
- height: 100%;
+    background-color: #283845;
     font-size:xx-large;
-    color: black;
-    border-radius: 0 55px 55px 0;
     border-left: 1px solid black;
    } 
    .seat-column-3:hover {
-   background-color: darkblue;
+   background-color: #202C39;
    }
   .seat-middle-column-1 {
     display: flex;
@@ -97,7 +76,7 @@ flex-direction: column;
     align-items: center;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    background-color: rgb(255, 234, 0);
+    background-color: #E8E8E8;
     height: 100%;
     width: 100%;
     font-size:xx-large;
@@ -106,26 +85,26 @@ flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: #5c5c5c;
     height: 100%;
     width: 100%;
     border-top: none;
     font-size:xx-large;
 } 
 .seat-middle-column-2:hover {
-background-color: darkred;
+background-color: #292929;
 }
  .seat-middle-column-3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: cyan;
+    background-color: #283845;
     height: 100%;
     width: 100%;
     font-size:xx-large;
 } 
 .seat-middle-column-3:hover {
-    background-color: darkblue;
+    background-color: #202C39;
 }
 *,*:before,*:after {
     box-sizing: border-box;
@@ -136,11 +115,11 @@ background-color: darkred;
   
   .seatBody {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
   
-  .seatContainer {
+  .seatsContainer {
     padding: 0 2rem;
     display: flex;
     justify-content: center;
@@ -310,31 +289,34 @@ background-color: darkred;
     -webkit-animation-name: rubberBand;
             animation-name: rubberBand;
   }
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 768px) {
     .seatBody {
       display: flex;
       flex-direction: column;
+      min-width: 99vw;
+      min-height: fit-content;
     }
     .seatPayment {
       margin-top: 5vh;
       margin-bottom: 6vh;
     }
-  }
-  @media only screen and (max-width: 600px) {
-    .seatPage {
-        width: auto;
-    }
     .seat-container {
-        height: 200px;
-        width: 200px;
-    }
-    /*.seat-column-1{
-        width: 50px;
-    }
-    .seat-column-2 {
-        width: 50px;
+        height: 300px;
+        width: 300px;
+    } 
+    .seat-column-1 {
+      font-size: smaller;
     }
     .seat-column-3 {
-        width: 50px;
-    }*/
+      font-size: smaller;
+    }
+    .seat-middle-column-1 {
+      font-size: smaller;
+    }
+    .seat-middle-column-2 {
+      font-size: smaller;
+    }
+    .seat-middle-column-3 {
+      font-size: smaller;
+    }
   }
