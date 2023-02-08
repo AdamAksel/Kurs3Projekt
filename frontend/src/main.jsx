@@ -24,7 +24,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route index element={<Start />} />
-      <Route path='/Calendar' element={<Calendar />} />
+      <Route path='/Calendar/:id' element={<Calendar />} />
       <Route path='/Login' element={<Login />} />
 
       <Route path='/Event/:id' element={<Event />} />

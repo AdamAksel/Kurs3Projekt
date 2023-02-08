@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-width: 100vw;
+  min-width: 100%;
   min-height: 100vh;
 }
 
@@ -15,7 +15,6 @@
   flex: 1;
   min-height: fit-content;
   border-radius: 30px;
-  overflow: hidden;
 }
 @media only screen and (max-width: 1200px) {
   .Event-area {
@@ -27,10 +26,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
-  min-height: 400px;
+  min-width: 50%;
+  max-height: 400px;
   flex: 1;
-  background-size: repeat;
   border-radius: 30px;
 }
 
@@ -71,6 +69,8 @@
   padding: 0px;
   padding-top: 8px;
   width: 8rem;
+  text-decoration: none;
+  color: inherit;
 }
 
 .Event-eventbutton {

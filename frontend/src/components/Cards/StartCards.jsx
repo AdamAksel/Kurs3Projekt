@@ -8,7 +8,7 @@ const StartCards = ({ event }) => {
         <section className='cards-container'>
           <div style={{ position: 'relative', outline: 'none' }}>
             <div className='cards-hero' style={{ outline: 'none' }}>
-              <img src={event.image} alt='chris-brown image' />
+              <img src={event.image} alt='ArtistImage Not Found' />
               <div className='cards-name'>
                 <div className='cards-name-text'>{event.name}</div>
               </div>

@@ -25,10 +25,20 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 30px;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+  .container_calendar {
+    margin-top: 40px;
+  }
 }
 /*! Events Card into Calendar component */
 .calendar {
-  width: 100%;
+  display: flex;
+  flex: 1;
+  min-width: 768px;
+  max-width: 1200px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -49,8 +59,10 @@ h1 {
 }
 
 .container__calendar__Card {
+  margin-top: 10px;
+  width: 95vw;
   position: relative;
-  height: 22rem;
+  height: 16rem;
   max-width: fit-content;
   margin-bottom: 20px;
   display: flex;
@@ -69,6 +81,7 @@ h1 {
   justify-content: start;
   align-items: center;
   flex-direction: column;
+  min-width: fit-content;
   height: 100%;
   padding: 20px 0 0 10px;
 }
@@ -87,7 +100,7 @@ h1 {
   text-transform: uppercase;
 }
 .event__date_day_number {
-  font-size: 44px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--secondary-color);
   text-transform: uppercase;
@@ -184,12 +197,22 @@ h1 {
 /*! Event Calendar Card payments button  */
 
 .event__payment__button {
+  text-decoration: none;
+  color: inherit;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   height: 100%;
   padding: 18px;
   width: 16rem;
+}
+
+.calendar-button-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40px;
+  width: 400px;
 }
 
 .event__button {
@@ -219,13 +242,6 @@ h1 {
   transform: scale(0.95);
 }
 
-.event__button::after {
-  content: ">";
-  position: absolute;
-  font-size: 18px;
-  font-weight: 100;
-  right: 10px;
-}
 .highlight {
   position: absolute;
   z-index: 1;
@@ -234,7 +250,7 @@ h1 {
 
 .highlight::after {
   display: block;
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -262,7 +278,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 90vw;
     height: 100%;
     box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
     gap: 0;
@@ -354,7 +370,7 @@ h1 {
 
   .highlight::after {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;

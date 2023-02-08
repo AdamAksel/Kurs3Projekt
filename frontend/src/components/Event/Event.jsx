@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import './Event.css'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import GlobalContext from '../../GlobalContext'
 
 const Event = () => {
@@ -11,6 +11,7 @@ const Event = () => {
   useEffect(() => {
     for (let i = 0; i < concerts.length; i++) {
       let foundEvent = getKeyByValue(concerts[i], id)
+      console.log(foundEvent)
       if (foundEvent) {
         setEvent({ ...concerts[i] })
         break
@@ -26,42 +27,34 @@ const Event = () => {
     <>
       <div className='Event-container'>
         <div className='Event-area'>
-          <div
-            className='Event-image-div'
-            style={{ backgroundImage: `url(${event.image})` }}
-          ></div>
+          <img className='Event-image-div' src={event.image} />
           <div className='Event-info'>
             <h1>{event.name}</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae id
-              cos ipsum dicta numquam.
-            </p>
+            <p>{event.info}</p>
           </div>
 
           <div className='Event-ticket-container'>
             <h1>Standard</h1>
-            <div className='Event-eventbutton-div'>
+
+            <Link to='/arenaseats' className='Event-eventbutton-div'>
               <button
-                disabled={event.tickets == 0}
+                disabled={event.ticket == 0}
                 className='Event-eventbutton'
-                style={event.tickets == 0 ? { backgroundColor: 'grey' } : null}
+                style={event.ticket == 0 ? { backgroundColor: 'grey' } : null}
               >
-                {event.tickets == 0 ? 'Tickets Unavaliable' : 'Buy Ticket'}
+                {event.ticket == 0 ? 'Tickets Unavaliable' : 'Buy Ticket'}
               </button>
-            </div>
+            </Link>
           </div>
 
           <div className='Event-artists'>
             <h1>Participating Artists</h1>
             <div className='Event-artists1'>
               <div className='Event-artists-row'>
-                <div
-                  className='Event-artists-img'
-                  style={{ backgroundImage: `url(${event.image})` }}
-                ></div>
-                <NavLink to={`/Artist/${event.name}`} className='Event-navlink'>
+                <img className='Event-artists-img' src={event.image} />
+                <Link to={`/Artist/${event.name}`} className='Event-navlink'>
                   <h3>{event.name}</h3>
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>
