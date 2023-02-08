@@ -1,7 +1,7 @@
 .cards-container {
-  width: 300px;
+  width: 400px;
   height: fit-content;
-  overflow-x: hidden;
+
   border-radius: 5px;
   box-shadow: 4px -4px 5px 0px rgb(111, 108, 108);
   cursor: pointer;

@@ -1,7 +1,8 @@
 .Sidebar-Container{
   position: sticky;
-  top: 50px;
-  min-height: 92.5vh;
+  top: 73px;
+  left: 0px;
+  min-height: 90vh;
   width: 250px;
   background-color: #202C39;
   color: #FFFFFF;
@@ -12,6 +13,12 @@
   box-shadow: 7px 0 10px -2px #888;
   padding-top: 10px;
 }
+@media only screen and (max-width: 768px) {
+  .Sidebar-Container{
+    display: none;
+  }
+}
+
 .Sidebar-Card{
   background-color: #E8E8E8;
   color: #202C39;

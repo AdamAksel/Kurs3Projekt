@@ -27,6 +27,8 @@ const router = createBrowserRouter(
       <Route index element={<Start />} />
       <Route path="/Calendar" element={<Calendar />} />
       <Route path="/Login" element={<Login />} />
+      <Route path='/Calendar/:id' element={<Calendar />} />
+      <Route path='/Login' element={<Login />} />
 
       <Route path="/Event/:id" element={<Event />} />
       <Route path="/Artist/:id" element={<Modal />} />
