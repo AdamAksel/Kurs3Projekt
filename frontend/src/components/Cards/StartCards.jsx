@@ -24,9 +24,9 @@ function StartCardContent() {
       <p>
         Time: {event.hour}:{event.minute}
       </p>
-      <p className='location'>
+      <b className='location'>
         {event.venue}
-      </p>
+      </b>
     </div>
     <div className='start-cards-eventbutton-div'>
       <button className='start-cards-eventbutton'>Buy Ticket</button>
