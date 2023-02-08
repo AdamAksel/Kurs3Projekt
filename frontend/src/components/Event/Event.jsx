@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import './Event.css'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import GlobalContext from '../../GlobalContext'
 
 const Event = () => {
@@ -11,6 +11,7 @@ const Event = () => {
   useEffect(() => {
     for (let i = 0; i < concerts.length; i++) {
       let foundEvent = getKeyByValue(concerts[i], id)
+      console.log(foundEvent)
       if (foundEvent) {
         setEvent({ ...concerts[i] })
         break
@@ -29,15 +30,13 @@ const Event = () => {
           <img className='Event-image-div' src={event.image} />
           <div className='Event-info'>
             <h1>{event.name}</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae id
-              cos ipsum dicta numquam.
-            </p>
+            <p>{event.info}</p>
           </div>
 
           <div className='Event-ticket-container'>
             <h1>Standard</h1>
-            <div className='Event-eventbutton-div'>
+
+            <Link to='/arenaseats' className='Event-eventbutton-div'>
               <button
                 disabled={event.ticket == 0}
                 className='Event-eventbutton'
@@ -45,7 +44,7 @@ const Event = () => {
               >
                 {event.ticket == 0 ? 'Tickets Unavaliable' : 'Buy Ticket'}
               </button>
-            </div>
+            </Link>
           </div>
 
           <div className='Event-artists'>
@@ -53,9 +52,9 @@ const Event = () => {
             <div className='Event-artists1'>
               <div className='Event-artists-row'>
                 <img className='Event-artists-img' src={event.image} />
-                <NavLink to={`/Artist/${event.name}`} className='Event-navlink'>
+                <Link to={`/Artist/${event.name}`} className='Event-navlink'>
                   <h3>{event.name}</h3>
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>

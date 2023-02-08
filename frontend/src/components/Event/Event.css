@@ -69,6 +69,8 @@
   padding: 0px;
   padding-top: 8px;
   width: 8rem;
+  text-decoration: none;
+  color: inherit;
 }
 
 .Event-eventbutton {
