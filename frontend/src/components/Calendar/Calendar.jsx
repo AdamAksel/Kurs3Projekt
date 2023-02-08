@@ -17,19 +17,27 @@ const Calendar = () => {
   return (
     <div className='container_calendar'>
       <div className='calendar-button-container'>
-        <button>
-          <Link to={`/Calendar/${parseInt(id) - 2}`}>{parseInt(id) - 2}</Link>
+        {id > 1 ? (
+          <>
+            {' '}
+            <Link to={`/Calendar/${parseInt(id) - 2}`}>
+              <button className='event__button'>{parseInt(id) - 2}</button>
+            </Link>
+            <Link to={`/Calendar/${parseInt(id) - 1}`}>
+              <button className='event__button'>{parseInt(id) - 1}</button>
+            </Link>
+          </>
+        ) : null}
+
+        <button style={{ color: 'black' }} className='event__button'>
+          {id}
         </button>
-        <button>
-          <Link to={`/Calendar/${parseInt(id) - 1}`}>{parseInt(id) - 1}</Link>
-        </button>
-        <button>{id}</button>
-        <button>
-          <Link to={`/Calendar/${parseInt(id) + 1}`}>{parseInt(id) + 1}</Link>
-        </button>
-        <button>
-          <Link to={`/Calendar/${parseInt(id) + 2}`}>{parseInt(id) + 2}</Link>
-        </button>
+        <Link to={`/Calendar/${parseInt(id) + 1}`}>
+          <button className='event__button'>{parseInt(id) + 1}</button>
+        </Link>
+        <Link to={`/Calendar/${parseInt(id) + 2}`}>
+          <button className='event__button'>{parseInt(id) + 2}</button>
+        </Link>
       </div>
       <div className='calendar'>
         {concerts

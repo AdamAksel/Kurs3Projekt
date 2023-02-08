@@ -30,6 +30,7 @@
   z-index: 100;
   box-shadow: 0 0 0.5rem 0.1rem var(--grey-color);
   gap: 0;
+  height: fit-content;
 }
 
 .navbar__nav__list {
@@ -61,7 +62,8 @@
 }
 @media only screen and (max-width: 872px) {
   .navbar__nav__logo__icon {
-    margin-left: 5px;
+    margin-left: 0px;
+    width: 6rem;
   }
 }
 
@@ -88,9 +90,19 @@
 .navbar__nav__list li {
   padding: 0 3rem;
 }
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 1080px) {
   .navbar__nav__list li {
     padding: 1rem;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .navbar__nav__list li {
+    padding: 0rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar__nav__list {
+    display: none;
   }
 }
 

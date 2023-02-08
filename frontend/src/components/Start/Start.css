@@ -4,7 +4,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  min-width: 20vw;
 }
 
 .start-flex {

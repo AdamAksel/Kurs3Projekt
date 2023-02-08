@@ -70,6 +70,8 @@ export const GlobalProvider = ({ children }) => {
     })
     tempSort.forEach((event) => {
       event.ticket = Math.floor(Math.random() * 2)
+      event.info =
+        'To ne cede malis, sed contra audentior ito Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, unde cupiditate iste quidem dolore possimus voluptates excepturi at esse, non quaerat, laborum voluptatem eius fugiat molestiae corrupti dolorem sit libero quibusdam placeat optio! Aliquid a beatae velit distinctio possimus architecto asperiores maiores eos facilis sit maxime, quam, quaerat, quas voluptatum!'
     })
     console.log(tempSort)
     todaysConcerts(tempSort)
