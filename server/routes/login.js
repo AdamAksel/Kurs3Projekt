@@ -32,8 +32,8 @@ router.post('/',
             request.session.passwordAttempts = 0
             request.session.user = user
             request.session.user.loggedIn = true
-            request.session.user.roles = user.roles.split(',') // splittar ett textfält med roller i user tabellen
-            response.json({loggedIn: true})
+            // request.session.user.roles = user.roles.split(',') // splittar ett textfält med roller i user tabellen
+            response.json(request.session.user)
         } else if ((user && user.email) && request.session?.verification?.status !== 0) {
             if (!request.session.verification || request.session?.verification?.status === -1) {
                 response.json({error: "You must verify your account using two-factor authentication"})
