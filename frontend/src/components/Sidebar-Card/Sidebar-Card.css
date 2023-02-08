@@ -1,16 +1,19 @@
-.Sidebar-Card {
-  background-color: #e8e8e8;
-  color: #202c39;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #ef2d56;
+.sidebar-card {
+    background-color: #e8e8e8;
+    color: #202c39;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: 2px solid #ef2d56;
+    max-width: 200px;
 }
-.Sidebar-Card:hover {
-  cursor: pointer;
+
+.sidebar-card:hover {
+    cursor: pointer;
 }
-.Sidebar-Card-Img {
-  min-height: 200px;
-  min-width: 200px;
+
+.sidebar-card-img {
+    min-height: 200px;
+    min-width: 200px;
 }

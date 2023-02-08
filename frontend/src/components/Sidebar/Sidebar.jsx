@@ -10,59 +10,59 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className='Sidebar-Container'>
-        <div className='Sidebar-Texts'>
-          <div
+      <aside className='sidebar'>
+        <div className='sidebar-texts'>
+          <p
             style={viewChange === 0 ? { backgroundColor: '#374a64' } : null}
             onClick={() => {
               setViewChange(0)
             }}
-            className='Sidebar-TodaysEvents-Text'
+            className='sidebar-todaysevents-text'
           >
             {' '}
             Today's Events{' '}
-          </div>
-          <div
+          </p>
+          <p
             style={viewChange === 1 ? { backgroundColor: '#374a64' } : null}
             onClick={() => {
               setViewChange(1)
             }}
-            className='Sidebar-RecentlyAdded-Text'
+            className='sidebar-recentlyadded-text'
           >
             {' '}
             Recently Added{' '}
-          </div>
+          </p>
         </div>
         {viewChange === 0 ? (
-          <div className='Sidebar-TodaysEvents'>
+          <section className='sidebar-todaysevents'>
             {todaysEvents
               .filter((event, index) => index < 2)
               .map((event) => (
                 <div
                   key={Math.random() * 1000000}
-                  className='Sidebar-TodaysEvents-Cards'
+                  className='sidebar-todaysevents-cards'
                 >
                   <SidebarCard event={event} />
                 </div>
               ))}
-          </div>
+          </section>
         ) : (
-          <div className='Sidebar-RecentlyAdded'>
-            <div className='Sidebar-RecentlyAdded-Cards'>
+          <section className='sidebar-recentlyadded'>
+            <div className='sidebar-recentlyadded-cards'>
               {recentlyAddedEvents
                 .filter((event, index) => index < 2)
                 .map((event) => (
                   <div
                     key={Math.random() * 1000000}
-                    className='Sidebar-TodaysEvents-Cards'
+                    className='sidebar-todaysevents-cards'
                   >
                     <SidebarCard event={event} />
                   </div>
                 ))}
             </div>
-          </div>
+          </section>
         )}
-      </div>
+      </aside>
     </>
   )
 }
