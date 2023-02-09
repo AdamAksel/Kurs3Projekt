@@ -1,22 +1,22 @@
-.cards-container {
-  width: 400px;
+.startCards {
+  width: 300px;
   height: fit-content;
-
   border-radius: 5px;
   box-shadow: 4px -4px 5px 0px rgb(111, 108, 108);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  margin: 20px;
 }
 
-.cards-container img {
+.startCards img {
   width: 300px;
   height: 200px;
   z-index: 1;
   opacity: 0.8;
-  outline: none;
 }
 
-.cards-container p {
-  outline: none;
+.startCards p {
   margin: 0;
   z-index: 10;
 }
@@ -28,23 +28,13 @@
   flex-direction: column;
 }
 
-.cards-name-text {
-  color: rgba(254, 255, 255, 1);
-  font-family: 'Merriweather', serif;
-  font-size: auto;
-  font-weight: bold;
-  opacity: 1;
-  outline: none;
-}
-
 .cards-name {
   min-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background: linear-gradient(to bottom left, black, white);
-  outline: none;
   border-radius: 4px;
+  color: rgba(254, 255, 255, 1);
+  font-family: 'Merriweather', serif;
 }
 
 .start-cards-date {
@@ -53,7 +43,6 @@
   color: var(--secondary-color);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
   z-index: 1;
   margin-bottom: 20px;
 }
@@ -88,6 +77,7 @@
 .start-cards-textbtn-wrapper {
   display: flex;
   justify-content: space-around;
+  font-size: 15px;
 }
 
 .start-cards-text-wrapper {
@@ -98,6 +88,7 @@
 .start-cards-navlink {
   text-decoration: none;
   color: inherit;
+  margin: 20px;
 }
 
 .location {

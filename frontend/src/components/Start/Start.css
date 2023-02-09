@@ -4,27 +4,18 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-}
-.sect-cards {
-  margin: 20px;
+  min-width: 20vw;
 }
 
 .start-flex {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   height: fit-content;
   background-color: #ffffff;
 }
 
-@media only screen and (max-width: 768px) {
-  .start-flex {
-    flex-direction: column;
-  }
-}
-
-.start-buttons-container {
+.startButtons {
   margin-top: 28px;
   display: flex;
   justify-content: space-evenly;
@@ -32,13 +23,6 @@
   min-width: 100%;
   min-height: 20px;
 }
-
-@media only screen and (min-width: 768px) {
-  .start-buttons-container {
-    display: none;
-  }
-}
-
 .start-button {
   min-width: 100px;
   background-color: #202c39;
@@ -48,8 +32,18 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
   padding: 0.5rem;
   border-bottom: 2px solid #202c39;
   border-radius: 25px;
+}
+@media only screen and (min-width: 768px) {
+  .startButtons {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .start-flex {
+    flex-direction: column;
+  }
 }

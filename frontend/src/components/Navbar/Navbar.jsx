@@ -3,7 +3,6 @@ import { NavLink, Outlet } from 'react-router-dom'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCircleUser } from '@fortawesome/free-solid-svg-icons'
-import ImageHeader from './ImageHeader'
 import IconResponsive from './IconResponsive'
 import { AuthContext } from '../context/authContext'
 import SearchInput from './SearchInput'
@@ -23,7 +22,7 @@ const Navbar = () => {
           <NavLink to='/'>
             <img
               src='./logo.svg'
-              alt='vegas'
+              alt='Logo'
               className='navbar__nav__logo__icon'
             />
           </NavLink>
