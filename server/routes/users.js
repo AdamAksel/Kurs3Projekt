@@ -27,7 +27,7 @@ router.post('/', (request, response) => {
     catch (e) {
         console.error(e)
     }
-    response.json(result)
+    response.json(user)
 })
 
 // begär ändring av lösenord för användare

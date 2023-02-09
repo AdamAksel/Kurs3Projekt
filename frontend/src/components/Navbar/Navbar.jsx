@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, } from 'react-router-dom'
 import './Navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCircleUser } from '@fortawesome/free-solid-svg-icons'
@@ -40,7 +40,7 @@ const Navbar = () => {
                 <li className='username'>
                   <h4>
                     {currentUser
-                      ? currentUser.email.split('@', 1)
+                      ? currentUser.email
                       : currentUser}
                   </h4>
                   <div onClick={handleLogout}>logout</div>
