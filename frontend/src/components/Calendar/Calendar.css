@@ -40,7 +40,6 @@
   min-width: 768px;
   max-width: 1200px;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -58,7 +57,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.container__calendar__Card {
+.container_card {
   margin-top: 10px;
   width: 95vw;
   position: relative;
@@ -76,7 +75,7 @@ h1 {
 
 /*! Date Calendar Card  */
 
-.event__date {
+.artist {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -93,13 +92,8 @@ h1 {
   font-size: 22px;
 }
 
-.event__date_day {
-  font-size: 10px;
-  font-weight: 600;
-  color: var(--secondary-color);
-  text-transform: uppercase;
-}
-.event__date_day_number {
+
+.date {
   font-size: 20px;
   font-weight: 600;
   color: var(--secondary-color);
@@ -115,14 +109,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.event__date__month {
-  margin-right: 1px;
-}
-.event__date__year {
-  margin-left: 1px;
-}
-
-.event__date__time {
+.time {
   margin-top: 14px;
   font-size: 12px;
   font-weight: 600;
@@ -130,12 +117,12 @@ h1 {
 }
 
 /*! images Calendar Card  */
-.event__image {
+.container_image {
   width: 28rem;
   height: 100%;
   margin: 0;
 }
-.event__img {
+.image {
   width: 100%;
   height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -145,12 +132,6 @@ h1 {
 }
 
 /*! Event Calendar Card title and description  */
-
-.event__info {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
 
 .event__title {
   position: absolute;
@@ -163,7 +144,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.event__description {
+.information {
   top: 50px;
   width: 100%;
   font-size: 14px;
@@ -172,7 +153,7 @@ h1 {
   margin-bottom: 5px;
 }
 
-.event__location {
+.location {
   position: absolute;
   font-size: 14px;
   font-weight: 400;
@@ -183,20 +164,20 @@ h1 {
   bottom: 0;
 }
 
-.event__location span {
+.location span {
   margin: 5px;
   font-size: 24px;
   color: var(--black-color);
   font-weight: 100;
 }
 
-.event__location p:nth-child(3) {
+.location p:nth-child(3) {
   color: var(--grey-color);
 }
 
 /*! Event Calendar Card payments button  */
 
-.event__payment__button {
+.payment__button {
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -215,7 +196,7 @@ h1 {
   width: 400px;
 }
 
-.event__button {
+.button {
   position: relative;
   font-size: 12px;
   font-weight: 600;
@@ -233,11 +214,11 @@ h1 {
   align-items: center;
 }
 
-.event__button:hover {
+.button:hover {
   background-color: var(--dark-red-color);
 }
 
-.event__button:active {
+.button:active {
   background-color: var(--dark-red-color);
   transform: scale(0.95);
 }
@@ -272,7 +253,7 @@ h1 {
     height: 100%;
     background-color: #ffffff;
   }
-  .container__calendar__Card {
+  .container_card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -283,31 +264,26 @@ h1 {
     box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
     gap: 0;
   }
-  .event__image {
+  .container_image {
     width: 100%;
     height: 12rem;
   }
-  .event__info {
-    width: 100%;
-    height: 100%;
-    padding: 0 10px;
-  }
-  .event__description {
+  .information {
     top: 20px;
     margin-bottom: 30px;
   }
-  .event__location {
+  .location {
     bottom: 40px;
   }
-  .event__payment__button {
+  .payment__button {
     width: 100%;
     padding: 10px;
   }
-  .event__button {
+  .button {
     width: 100%;
     padding: 10px 20px;
   }
-  .event__button::after {
+  .button::after {
     right: 5px;
     top: 5px;
   }
@@ -315,7 +291,7 @@ h1 {
     display: none;
   }
 
-  .event__date {
+  .artist {
     top: 0;
     width: 20%;
     font-size: 10px;
@@ -335,7 +311,7 @@ h1 {
     padding: 0;
   }
 
-  .event__date__time {
+  .time {
     margin: 0;
   }
 
@@ -382,7 +358,7 @@ h1 {
     background-image: var(--gradient-primary);
   }
 
-  .event__image {
+  .container_image {
     width: 100%;
     height: 22rem;
     padding: 0;
