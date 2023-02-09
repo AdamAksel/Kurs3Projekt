@@ -7,7 +7,7 @@ import { faBars, faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import ImageHeader from "./ImageHeader";
 import IconResponsive from "./IconResponsive";
 import { AuthContext } from "../context/authContext";
-=======
+
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import './Navbar.css'
