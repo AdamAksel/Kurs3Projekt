@@ -1,4 +1,4 @@
-.Event-container {
+.event {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -22,7 +22,7 @@
   }
 }
 
-.Event-image-div {
+.event-image {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,12 +33,12 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .Event-image-div {
+  .event-image {
     min-height: 300px;
   }
 }
 
-.Event-info {
+.event-info {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -48,7 +48,7 @@
   min-width: 100%;
 }
 
-.Event-ticket-container {
+.event-ticket {
   display: flex;
   display: flex;
   justify-content: space-around;
@@ -61,7 +61,7 @@
   background-color: #d8d8d8;
 }
 
-.Event-eventbutton-div {
+.event-ticket-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +73,7 @@
   color: inherit;
 }
 
-.Event-eventbutton {
+.event-ticket-button {
   font-size: 10px;
   font-weight: 600;
   color: #e8e8e8;
@@ -90,7 +90,7 @@
   align-items: center;
 }
 
-.Event-artists {
+.event-artists {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -99,7 +99,7 @@
   padding: 4vh;
   min-width: 100%;
 }
-.Event-artists1 {
+.event-artists-wrap {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -109,7 +109,7 @@
   min-width: 100%;
 }
 
-.Event-artists-row {
+.event-artists-row {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -132,7 +132,7 @@
   }
 }
 
-.Event-artists-img {
+.event-artists-img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,7 +145,7 @@
   border-radius: 30px;
 }
 
-.Event-navlink {
+.event-navlink {
   text-decoration: none;
   color: inherit;
 }
