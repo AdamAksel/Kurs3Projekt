@@ -1,93 +1,66 @@
-.Sidebar-Container{
-  position: sticky;
-  top: 73px;
-  left: 0px;
-  min-height: 90vh;
-  width: 250px;
-  background-color: #202C39;
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  box-shadow: 7px 0 10px -2px #888;
-  padding-top: 10px;
-}
-@media only screen and (max-width: 768px) {
-  .Sidebar-Container{
-    display: none;
-  }
+.sidebar {
+    position: sticky;
+    min-height: 90vh;
+    width: 250px;
+    background-color: #202C39;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 7px 0 10px -2px #888;
+    padding-top: 10px;
+    gap: 30px;
 }
 
-.Sidebar-Card{
-  background-color: #E8E8E8;
-  color: #202C39;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #EF2D56;
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
 }
-.Sidebar-Card:hover{
-  cursor: pointer;
+
+.sidebar-card:hover {
+    cursor: pointer;
 }
-.Sidebar-Card-Img{
-  width: 200px;
+
+.sidebar-card-img {
+    width: 200px;
 }
-.Sidebar-TodaysEvents-Cards{
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  overflow-y: scroll;
-  max-height: 82vh;
-  overscroll-behavior: contain;
-  margin-left: 16px;
+
+.sidebar-todaysevents-cards {
+    display: flex;
+    flex-direction: column;
+    max-height: 82vh;
+    margin-bottom: 40px;
 }
-.Sidebar-RecentlyAdded-Cards{
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  overflow-y: scroll;
-  max-height: 82vh;
-  overscroll-behavior: contain;
+
+.sidebar-recentlyadded-cards {
+    display: flex;
+    flex-direction: column;
+    max-height: 82vh;
 }
-.Sidebar-Texts{
-  font-size: small;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 250px;
-  cursor: pointer;
-  gap:1px;
-  margin: 2px 0 5px 0;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid #FFFFFF;
+
+.sidebar-texts {
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    cursor: pointer;
+    gap: 1px;
+    margin: 2px 0 5px 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #FFFFFF;
 }
-.Sidebar-TodaysEvents-Text:hover{
-  background-color: #374a64;
+
+.sidebar-button:hover {
+    background-color: #374a64;
 }
-.Sidebar-TodaysEvents-Text:active{
-  background-color: #5c7ba6;
+
+.sidebar-button:active {
+    background-color: #5c7ba6;
 }
-.Sidebar-RecentlyAdded-Text:hover{
-  background-color: #374a64;
-}
-.Sidebar-RecentlyAdded-Text:active{
-  background-color: #5c7ba6;
-}
-.Sidebar-RecentlyAdded-Text{
-  padding: 0.5rem 0.75rem 0.5rem 0.75rem ;
-  border-radius: 8px;
-}
-.Sidebar-TodaysEvents-Text{
-  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-  border-radius: 8px;
-}
-::-webkit-scrollbar {
-  width: 0.5em;
-}
-::-webkit-scrollbar-thumb{
-  background-color: #e8e8e8;
-  border-radius: 35px;
-  margin: 0 4px 0 4px;
+
+.sidebar-button {
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    border-radius: 8px;
 }

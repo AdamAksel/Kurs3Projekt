@@ -1,16 +1,24 @@
-import React from "react";
+import './Sidebar-Card.css'
+import altImg from './ATLienz.jpg'
+import {NavLink} from "react-router-dom";
 
 const SidebarCard = ({event}) => {
 
     return (
         <>
-            <div className="Sidebar-Card">
-                <img className="Sidebar-Card-Img"
-                     src={event.image}/>
-                <div className="Sidebar-Card-Info"> {event.name} </div>
-                <div className="Sidebar-Card-Info"> {event.added ? "Added Today!" : event.datum} </div>
-                <div className="Sidebar-Card-Info"><b>{event.venue}</b></div>
+            <NavLink to={`/Event/${event.name}`} className='sidebar-card-navlink'>
+            <div className="sidebar-card">
+                <img className="sidebar-card-img"
+                     src={event.image}
+                     alt="Artist/Band"
+                     onError={(e)=>{
+                        e.target.src = altImg
+                }}/>
+                <div className="sidebar-card-info"> {event.name} </div>
+                <div className="sidebar-card-info"> {event.added ? "Added Today!" : event.datum} </div>
+                <div className="sidebar-card-info"><b>{event.venue}</b></div>
             </div>
+            </NavLink>
         </>
     )
 }
