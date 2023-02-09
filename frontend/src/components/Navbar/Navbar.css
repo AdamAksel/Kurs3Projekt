@@ -92,12 +92,12 @@
 }
 @media only screen and (max-width: 1080px) {
   .navbar__nav__list li {
-    padding: 1rem;
+    padding: 2rem;
   }
 }
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 840px) {
   .navbar__nav__list li {
-    padding: 0rem;
+    padding: 0.5rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -446,4 +446,31 @@
     background-color: #fdfdfd;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.4);
   }
+}
+
+.username {
+  font-size: 22px;
+  margin: 0 1rem;
+  background-color: var(--dark-orange-color);
+  border-radius: 20px;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.username:hover {
+  background-color: var(--light-orange-color);
+}
+
+.username:active {
+  transform: scale(0.9);
+}
+
+.navbar__nav__list li a {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
