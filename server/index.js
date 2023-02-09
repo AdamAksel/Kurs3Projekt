@@ -6,11 +6,13 @@ import login from "./routes/login.js";
 import genericRoutes from "./routes/generic-routes.js";
 import dbConnection from "./services/db-connection.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 import session from "express-session";
 
 const app = express();
 app.use(express.json())
+app.use(cors())
 const port = 3333
 const host = `http://localhost:${port}`
 app.use(cookieParser())
