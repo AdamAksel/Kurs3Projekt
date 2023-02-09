@@ -14,9 +14,9 @@ export default function BuyTickets() {
 
   const handleBuyNow = () => {
     if (ticketQuantity > 0) {
-        setShowNotification(true);
-        setTicketQuantity(0);
-        setTotalCost(0);
+      setShowNotification(true);
+      setTicketQuantity(0);
+      setTotalCost(0);
     }
 
   };
@@ -26,37 +26,29 @@ export default function BuyTickets() {
   };
 
   return (
-        
-<div className="ticketsPage"> 
+
+    <div className="tickets">
       <h1>Buy Tickets</h1>
- <div class="container">
-
-<div className="buy-tickets-page">
-      
-      <div className="ticket-quantity">
-        <label>Ticket Quantity:</label>
-        <input
-        className="input_ticket"
-          type="number"
-          value={ticketQuantity}
-          onChange={handleQuantityChange}
-
-        />
-        <label>Total Cost:</label>
-        <p>${totalCost}</p>
-      </div>
-      </div>
-     
-      
-       
+      <div class="ticketcount">
+        <div className="ticket-quantity">
+          <label>Ticket Quantity:</label>
+          <input
+            className="input_ticket"
+            type="number"
+            value={ticketQuantity}
+            onChange={handleQuantityChange}
+          />
+          <label>Total Cost:</label>
+          <p>${totalCost}</p>
+        </div>
       </div>
       <button className="buy-now-button" onClick={handleBuyNow}>Buy Now</button>
-        {showNotification && (
-            <div className="notification">
-            <p>Ticket purchased successfully!</p>
-            <button onClick={handleCloseNotification}>Close</button>
-          </div>
-              )}
-    </div> 
+      {showNotification && (
+        <div className="notification">
+          <p>Ticket purchased successfully!</p>
+          <button onClick={handleCloseNotification}>Close</button>
+        </div>
+      )}
+    </div>
   );
 }
