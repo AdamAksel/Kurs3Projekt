@@ -52,38 +52,15 @@
     border-bottom: 2px solid #FFFFFF;
 }
 
-.sidebar-todaysevents-text:hover {
+.sidebar-button:hover {
     background-color: #374a64;
 }
 
-.sidebar-todaysevents-text:active {
+.sidebar-button:active {
     background-color: #5c7ba6;
 }
 
-.sidebar-recentlyadded-text:hover {
-    background-color: #374a64;
-}
-
-.sidebar-recentlyadded-text:active {
-    background-color: #5c7ba6;
-}
-
-.sidebar-recentlyadded-text {
+.sidebar-button {
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     border-radius: 8px;
-}
-
-.sidebar-todaysevents-text {
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    border-radius: 8px;
-}
-
-::-webkit-scrollbar {
-    width: 0.5em;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #e8e8e8;
-    border-radius: 35px;
-    margin: 0 4px 0 4px;
 }
