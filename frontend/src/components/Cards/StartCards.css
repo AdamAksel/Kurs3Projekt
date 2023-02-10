@@ -83,6 +83,8 @@
 .start-cards-text-wrapper {
   max-width: 50%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .start-cards-navlink {
@@ -91,9 +93,6 @@
   margin: 20px;
 }
 
-.location {
-  font-size: auto;
-}
 @media screen and (min-width: 1630px) {
   .startCards {
     margin: 58px;
