@@ -39,11 +39,7 @@ const Navbar = () => {
 
               {currentUser ? (
                 <li className='username'>
-                  <h4>
-                    {currentUser
-                      ? currentUser.email.split('@', 1)
-                      : currentUser}
-                  </h4>
+                  <h4>{currentUser ? currentUser.email : currentUser}</h4>
                   <div onClick={handleLogout}>logout</div>
                 </li>
               ) : (
