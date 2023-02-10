@@ -38,7 +38,7 @@ export default function LoginItem({ handleHideModal, handleModal }) {
           <h1 className="Login-title">Log in or sign up</h1>
           <div className="line-1"></div>
           <h1 className="welcome"> Welcome </h1>
-          <form onSubmit={handleModal}>
+          <form onSubmit={handleSubmit} action="javascript:void(0)">
             <div className="Login-form-group">
               <input
                 type="email"
@@ -60,9 +60,9 @@ export default function LoginItem({ handleHideModal, handleModal }) {
               />
               {login && <p className="error">{login}</p>}
             </div>
-            <button className="Login-form-button" onClick={handleSubmit}>
+            <input type={'submit'} className="Login-form-button">
               Log in
-            </button>
+            </input>
 
             <div className="Login-form-group">
               <p className="Login-form-text">
