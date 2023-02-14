@@ -92,7 +92,6 @@ h1 {
   font-size: 22px;
 }
 
-
 .date {
   font-size: 20px;
   font-weight: 600;
@@ -123,8 +122,8 @@ h1 {
   margin: 0;
 }
 .image {
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 0;
@@ -147,10 +146,12 @@ h1 {
 .information {
   top: 50px;
   width: 100%;
+  max-height: 80%;
   font-size: 14px;
   font-weight: 400;
   color: var(--dark-grey-color);
   margin-bottom: 5px;
+  overflow: hidden;
 }
 
 .location {
@@ -196,7 +197,25 @@ h1 {
   width: 400px;
 }
 
-.button {
+.calendar-button {
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white-color);
+  background-color: var(--light-red-color);
+  text-transform: uppercase;
+  padding: 10px 28px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar1-button {
   position: relative;
   font-size: 12px;
   font-weight: 600;
@@ -359,6 +378,8 @@ h1 {
   }
 
   .container_image {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 22rem;
     padding: 0;

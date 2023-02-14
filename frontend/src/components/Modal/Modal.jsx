@@ -20,19 +20,18 @@ export default function Modal() {
   }, [id])
 
   function getKeyByValue(object, value) {
-    return Object.keys(object).find((key) => object[key] === value)
+    return Object.keys(object).find((key) => object[key] == value)
   }
 
   return (
     <>
       <div className='modal'>
-        <NavLink to={`/Event/${event.name}`} className='start-cards-navlink'>
+        <NavLink to={`/Event/${event.id}`} className='start-cards-navlink'>
           <div className='overlay'></div>
         </NavLink>
         <div className='modal-content'>
           <div id='modal-pic'>
-            {' '}
-            <img src={event.image} id='chris' />{' '}
+            <img src={event.image} id='chris' />
           </div>
           <div className='modal-text'>
             <div className='modal-div'>{event.name}</div>
