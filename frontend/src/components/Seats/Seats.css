@@ -277,6 +277,10 @@ label:hover {
   animation-name: rubberBand;
 }
 @media only screen and (max-width: 768px) {
+  .arena {
+    height: 400px;
+    width: 400px;
+  }
   .seats {
     display: flex;
     flex-direction: column;
