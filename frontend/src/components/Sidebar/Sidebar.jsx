@@ -47,18 +47,16 @@ export default function () {
                     </section>
                 ) : (
                     <section className='sidebar-recentlyadded'>
-                        <div className='sidebar-recentlyadded-cards'>
                             {recentlyAddedEvents
                                 .filter((event, index) => index < 2)
                                 .map((event) => (
                                     <div
                                         key={Math.random() * 1000000}
-                                        className='sidebar-todaysevents-cards'
+                                        className='sidebar-recentlyadded-cards'
                                     >
                                         <SidebarCard event={event}/>
                                     </div>
                                 ))}
-                        </div>
                     </section>
                 )}
             </aside>
