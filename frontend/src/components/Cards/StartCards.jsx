@@ -1,9 +1,10 @@
 import './StartCards.css'
 import { Link } from 'react-router-dom'
+import altImg from '../Sidebar-Card/ATLienz.jpg'
 
 export default function ({ event }) {
   return (
-    <Link to={`/Event/${event.name}`} className='startCards'>
+    <Link to={`/Event/${event.id}`} className='startCards'>
       <StartCardImage />
       <StartCardContent />
     </Link>
@@ -12,7 +13,13 @@ export default function ({ event }) {
   function StartCardImage() {
     return (
       <div className='cards-hero'>
-        <img src={event.image} alt='ArtistImage Not Found' />
+        <img
+          src={event.image}
+          alt='ArtistImage Not Found'
+          onError={(e) => {
+            e.target.src = altImg
+          }}
+        />
         <div className='cards-name'>{event.name}</div>
       </div>
     )
@@ -27,12 +34,11 @@ export default function ({ event }) {
             <p>
               Time: {event.hour}:{event.minute}
             </p>
-            <p className='location1'>
-              <b>{event.venue}</b>
-            </p>
+
+            <b className='start-cards-location'>{event.venue}</b>
           </div>
           <div className='start-cards-eventbutton-div'>
-            <button className='start-cards-eventbutton'>Buy Ticket</button>
+            <button className='start-cards-eventbutton'>Go To</button>
           </div>
         </div>
       </>
